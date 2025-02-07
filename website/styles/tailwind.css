@@ -8,4 +8,32 @@
 
     --font-sans: var(--font-sans);
     --font-mono: var(--font-mono);
+    
+    --color-background: var(--color-background);
+    --color-foreground: var(--color-foreground);
+    --color-card: var(--color-card);
+    --color-card-foreground: var(--color-card-foreground);
+    --color-popover: var(--color-popover);
+    --color-popover-foreground: var(--color-popover-foreground);
+    --color-border: var(--color-border);
+    --color-ring: var(--color-ring);
+
+    --color-default-50: var(--color-default-50);
+    --color-default-100: var(--color-default-100);
+    --color-default-200: var(--color-default-200);
+    --color-default-300: var(--color-default-300);
+    --color-default-400: var(--color-default-400);
+    --color-default-500: var(--color-default-500);
+    --color-default-600: var(--color-default-600);
+    --color-default-700: var(--color-default-700);
+    --color-default-800: var(--color-default-800);
+    --color-default-900: var(--color-default-900);
+    --color-default-950: var(--color-default-950);
+
+    --color-primary: var(--color-primary);
+    --color-primary-foreground: var(--color-primary-foreground);
+    --color-secondary: var(--color-secondary);
+    --color-secondary-foreground: var(--color-secondary-foreground);
+    --color-error: var(--color-error);
+    --color-error-foreground: var(--color-error-foreground);
 }

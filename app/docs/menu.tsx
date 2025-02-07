@@ -14,6 +14,10 @@ export const docsSidebarNavSections: SidebarNavSection[] = [
                 title: "Introduction",
                 link: base.home,
             },
+            {
+                title: "Theme",
+                link: base.theme,
+            },
         ],
     },
 ];

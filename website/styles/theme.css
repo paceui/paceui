@@ -1,0 +1,54 @@
+&:root {
+    --color-background: hsl(0, 0%, 100%);
+    --color-foreground: hsl(240, 10%, 3.9%);
+    --color-card: hsl(0, 0%, 100%);
+    --color-card-foreground: hsl(240, 10%, 3.9%);
+    --color-popover: hsl(0, 0%, 100%);
+    --color-popover-foreground: hsl(240, 10%, 3.9%);
+    --color-border: hsl(240, 5.9%, 90%);
+    --color-ring: hsl(0, 0%, 64%);
+
+    /* Base = Neutral */
+    --color-default-50: hsl(0, 0%, 98%);
+    --color-default-100: hsl(0, 0%, 96%);
+    --color-default-200: hsl(0, 0%, 90%);
+    --color-default-300: hsl(0, 0%, 83%);
+    --color-default-400: hsl(0, 0%, 64%);
+    --color-default-500: hsl(0, 0%, 45%);
+    --color-default-600: hsl(0, 0%, 32%);
+    --color-default-700: hsl(0, 0%, 25%);
+    --color-default-800: hsl(0, 0%, 15%);
+    --color-default-900: hsl(0, 0%, 9%);
+    --color-default-950: hsl(0, 0%, 4%);
+
+    /* Brand Palette = Blue */
+    --color-primary: hsl(233, 88%, 62%);
+    --color-primary-foreground: hsl(0, 0%, 98%);
+    --color-secondary: hsl(233, 32%, 40%);
+    --color-secondary-foreground: hsl(0, 0%, 98%);
+    --color-error: hsl(0, 84.2%, 60.2%);
+    --color-error-foreground: hsl(0, 0%, 98%);
+
+    &.dark {
+        --color-background: hsl(240, 10%, 3.9%);
+        --color-foreground: hsl(0, 0%, 98%);
+        --color-card: hsl(240, 10%, 3.9%);
+        --color-card-foreground: hsl(0, 0%, 98%);
+        --color-popover: hsl(240, 10%, 3.9%);
+        --color-popover-foreground: hsl(0, 0%, 98%);
+        --color-border: hsl(240, 3.7%, 15.9%);
+
+        /* Base = Neutral */
+        --color-default-950: hsl(0, 0%, 98%);
+        --color-default-900: hsl(0, 0%, 96%);
+        --color-default-800: hsl(0, 0%, 90%);
+        --color-default-700: hsl(0, 0%, 83%);
+        --color-default-600: hsl(0, 0%, 64%);
+        --color-default-500: hsl(0, 0%, 45%);
+        --color-default-400: hsl(0, 0%, 32%);
+        --color-default-300: hsl(0, 0%, 25%);
+        --color-default-200: hsl(0, 0%, 15%);
+        --color-default-100: hsl(0, 0%, 9%);
+        --color-default-50: hsl(0, 0%, 4%);
+    }
+}
