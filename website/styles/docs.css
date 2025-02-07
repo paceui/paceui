@@ -1,0 +1,12 @@
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+}
+
+@layer utilities {
+    .container {
+        margin-inline: auto;
+        @apply px-[1rem] 2xl:px-[4rem];
+    }
+}

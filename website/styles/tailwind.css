@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --text-sm: 14px;
+    --text-base: 16px;
+
+    --font-sans: var(--font-sans);
+    --font-mono: var(--font-mono);
+}
