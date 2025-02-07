@@ -3,5 +3,8 @@ export const routes = {
     docs: {
         home: "/docs",
         theme: "/docs/theme",
-    }
+        components: {
+            base: "/docs/components",
+        },
+    },
 };

@@ -1,6 +1,24 @@
 @layer base {
+    * {
+        @apply border-border;
+    }
+
     html {
         @apply scroll-smooth;
+    }
+
+    body {
+        @apply bg-background text-foreground text-base;
+        font-synthesis-weight: none;
+        text-rendering: optimizeLegibility;
+        &::-webkit-scrollbar {
+            background-color: transparent;
+            width: 6px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            @apply bg-default-300;
+        }
     }
 }
 

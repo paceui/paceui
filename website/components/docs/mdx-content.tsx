@@ -4,6 +4,8 @@ import * as runtime from "react/jsx-runtime";
 
 import { cn } from "@/lib/utils";
 
+import { DemoCodePreview } from "./demo-code-preview";
+
 const sharedComponents = {
     h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <h2
@@ -70,6 +72,7 @@ const sharedComponents = {
         />
     ),
     Link,
+    DemoCodePreview,
 };
 
 const useMDXComponent = (code: string) => {
