@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 export type AccordionProps = React.ComponentProps<typeof AccordionPrimitive.Root>;
 
 export const Accordion = ({ className, ...props }: AccordionProps) => {
-    return <AccordionPrimitive.Root className={cn({ className })} {...props} />;
+    return <AccordionPrimitive.Root className={cn(className)} {...props} />;
 };
 
 export type AccordionItemProps = React.ComponentProps<typeof AccordionPrimitive.Item>;
