@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "@radix-ui/react-accordion": "^1.2.3",
+        "@radix-ui/react-scroll-area": "^1.2.3",
         "@radix-ui/react-slot": "^1.1.2",
         "clsx": "^2.1.1",
         "lucide-react": "^0.474.0",
