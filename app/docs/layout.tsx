@@ -3,7 +3,7 @@ import React from "react";
 import { Sidebar } from "@/website/components/layouts/sidebar";
 import { Topbar } from "@/website/components/layouts/topbar";
 
-import { docsSidebarNavSections } from "./menu";
+import { docsSidebarNavItems } from "./menu";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
     return (
@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Topbar />
             <div className="flex">
                 <div className="sticky top-16 hidden max-h-[calc(100vh-70px)] w-60 min-w-60 md:block">
-                    <Sidebar sections={docsSidebarNavSections} />
+                    <Sidebar items={docsSidebarNavItems} />
                 </div>
                 <div className="mt-4 min-w-0 grow">{children}</div>
             </div>

@@ -11,39 +11,35 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 
 export type SidebarNavItem = {
+    icon?: ReactNode;
     title: string;
+    items?: SidebarNavItem[];
+    expanded?: boolean;
+    comingSoon?: boolean;
     link?: string;
 };
 
-export type SidebarNavSection = {
-    icon?: ReactNode;
-    title: string;
-    items: SidebarNavItem[];
-    expanded?: boolean;
-    comingSoon?: boolean;
-};
-
 type SidebarProps = {
-    sections: SidebarNavSection[];
+    items: SidebarNavItem[];
     className?: ClassNameValue;
 };
 
-export const Sidebar = ({ sections, className }: SidebarProps) => {
+export const Sidebar = ({ items, className }: SidebarProps) => {
     const pathname = usePathname();
-    const allSections = sections
-        .filter((section) => {
-            if (!section.expanded) {
-                return section.items.find((item) => item.link == pathname);
+    const allItems = items
+        .filter((item) => {
+            if (!item.expanded) {
+                return item.items?.find((item) => item.link == pathname);
             }
-            return section.expanded;
+            return item.expanded;
         })
         .map((s) => s.title);
 
     return (
         <ScrollArea className={cn("relative h-full", className)}>
-            <Accordion type="multiple" defaultValue={allSections} className="group/arrow space-y-1.5 pt-1 pb-6">
-                {sections.map((section, key) => (
-                    <SidebarNavSection key={key} section={section} pathname={pathname} />
+            <Accordion type="multiple" defaultValue={allItems} className="group/arrow space-y-1.5 pt-1 pb-6">
+                {items.map((item, key) => (
+                    <SidebarNavItem key={key} item={item} pathname={pathname} />
                 ))}
             </Accordion>
             <div className="from-background absolute top-0 h-5 w-full bg-gradient-to-b to-transparent"></div>
@@ -52,41 +48,39 @@ export const Sidebar = ({ sections, className }: SidebarProps) => {
     );
 };
 
-const SidebarNavSection = ({ section, pathname }: { section: SidebarNavSection; pathname: string }) => {
-    return (
+const SidebarNavItem = ({ item, pathname }: { item: SidebarNavItem; pathname: string }) => {
+    return item.items ? (
         <AccordionItem
-            value={section.title}
+            value={item.title}
             className={cn("border-0", {
-                "opacity-70": section.comingSoon,
+                "opacity-70": item.comingSoon,
             })}>
             <AccordionTrigger className="py-2 pe-2 hover:no-underline [&>svg]:opacity-0 [&>svg]:transition-all group-hover/arrow:[&>svg]:opacity-100">
                 <div className="flex items-center gap-1.5">
-                    {section.icon && <Slot className="text-default-600 size-4">{section.icon}</Slot>}
-                    {section.title}
+                    {item.icon && <Slot className="text-default-600 size-4">{item.icon}</Slot>}
+                    {item.title}
                 </div>
             </AccordionTrigger>
             <AccordionContent
                 className={cn("mx-3 pb-0", {
-                    "pointer-events-none": section.comingSoon,
+                    "pointer-events-none": item.comingSoon,
                 })}>
-                {section.items.map((item, key) => (
+                {item.items.map((item, key) => (
                     <SidebarNavItem item={item} key={key} pathname={pathname} />
                 ))}
             </AccordionContent>
         </AccordionItem>
-    );
-};
-
-const SidebarNavItem = ({ item, pathname }: { item: SidebarNavItem; pathname: string }) => {
-    return (
-        <>
-            <Link
-                className={cn("text-default-700 hover:bg-default-100 mb-0.5 block rounded px-2.5 py-1 text-[15px]", {
-                    "!bg-primary/10 text-primary": pathname == item.link,
-                })}
-                href={item.link ?? "#"}>
-                {item.title}
-            </Link>
-        </>
+    ) : (
+        <Link
+            className={cn(
+                "text-default-700 hover:bg-default-100 mb-0.5 flex items-center gap-2 rounded px-2.5 py-2 text-[15px]/none",
+                {
+                    "!bg-primary/10 !text-primary": pathname == item.link,
+                },
+            )}
+            href={item.link ?? "#"}>
+            {item.icon && <Slot className="size-4">{item.icon}</Slot>}
+            {item.title}
+        </Link>
     );
 };

@@ -1,12 +1,12 @@
 import { BookOpenTextIcon, HourglassIcon, ShapesIcon } from "lucide-react";
 
-import { SidebarNavSection } from "@/website/components/layouts/sidebar";
+import { SidebarNavItem } from "@/website/components/layouts/sidebar";
 import { routes } from "@/website/utils/routes";
 
 const base = routes.docs;
 const components = base.components.base;
 
-export const docsSidebarNavSections: SidebarNavSection[] = [
+export const docsSidebarNavItems: SidebarNavItem[] = [
     {
         title: "Getting Started",
         icon: <BookOpenTextIcon />,
