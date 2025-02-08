@@ -35,16 +35,20 @@ export const docsSidebarNavSections: SidebarNavSection[] = [
                 link: components + "/button",
             },
             {
+                title: "Breadcrumb",
+                link: components + "/breadcrumb",
+            },
+            {
+                title: "Label",
+                link: components + "/label",
+            },
+            {
                 title: "Select",
                 link: components + "/select",
             },
             {
                 title: "Switch",
                 link: components + "/switch",
-            },
-            {
-                title: "Label",
-                link: components + "/label",
             },
         ],
     },
@@ -58,9 +62,6 @@ export const docsSidebarNavSections: SidebarNavSection[] = [
             },
             {
                 title: "Checkbox",
-            },
-            {
-                title: "Breadcrumb",
             },
             {
                 title: "Dialog",
