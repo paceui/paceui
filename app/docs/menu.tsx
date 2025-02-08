@@ -38,6 +38,10 @@ export const docsSidebarNavSections: SidebarNavSection[] = [
                 title: "Select",
                 link: components + "/select",
             },
+            {
+                title: "Switch",
+                link: components + "/switch",
+            },
         ],
     },
     {
@@ -47,9 +51,6 @@ export const docsSidebarNavSections: SidebarNavSection[] = [
         items: [
             {
                 title: "Card",
-            },
-            {
-                title: "Switch",
             },
             {
                 title: "Label",
