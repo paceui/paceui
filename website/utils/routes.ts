@@ -4,6 +4,7 @@ export const routes = {
         home: "/docs",
         theme: "/docs/theme",
         components: {
+            home: "/docs/components/alert",
             base: "/docs/components",
         },
     },
