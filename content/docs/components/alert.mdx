@@ -23,3 +23,102 @@ description: Shows important messages with customizable styles
         },
     ]}
 />
+
+## Examples
+
+### Simple
+
+<DemoCodePreview
+    path="docs/alert/simple"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["solid", "outline", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+    ]}
+/>
+
+### Only Title
+
+<DemoCodePreview
+    path="docs/alert/only-title"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["solid", "outline", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+    ]}
+/>
+
+### Only Description
+
+<DemoCodePreview
+    path="docs/alert/only-description"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["solid", "outline", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+    ]}
+/>
+
+### Controlled
+
+<DemoCodePreview
+    path="docs/alert/controlled"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["solid", "outline", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+    ]}
+/>
+
+## Props
+
+| Prop         | Type                                    | Default |
+| ------------ | --------------------------------------- | ------- |
+| variant      | `solid` `outline` `soft`                | outline |
+| color        | `default` `primary` `secondary` `error` | default |
+| startContent | ReactNode                               | -       |
+| endContent   | ReactNode                               | -       |

@@ -20,8 +20,7 @@ export const CodePreview = async ({ path, code, lang = "tsx" }: Props) => {
     }
 
     const filterText = (text: string): string => {
-        const removeProps = text.replaceAll("{ ...props }: { [key: string]: string }", "");
-        return removeProps.replaceAll(" {...props}", "");
+        return text.replaceAll(/\{\s*\.\.\.props\s*}/g, "");
     };
 
     const filteredText = filterText(code);
