@@ -4,4 +4,22 @@ title: Alert
 description: Shows important messages with customizable styles
 ---
 
-<DemoCodePreview path="docs/alert/default" />
+<DemoCodePreview
+    path="docs/alert/default"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["solid", "outline", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+    ]}
+/>
