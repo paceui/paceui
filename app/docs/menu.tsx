@@ -30,6 +30,10 @@ export const docsSidebarNavSections: SidebarNavSection[] = [
                 title: "Alert",
                 link: components + "/alert",
             },
+            {
+                title: "Button",
+                link: components + "/button",
+            },
         ],
     },
     {
@@ -38,13 +42,22 @@ export const docsSidebarNavSections: SidebarNavSection[] = [
         comingSoon: true,
         items: [
             {
-                title: "Button",
-            },
-            {
                 title: "Card",
             },
             {
+                title: "Switch",
+            },
+            {
+                title: "Label",
+            },
+            {
                 title: "Checkbox",
+            },
+            {
+                title: "Select",
+            },
+            {
+                title: "Breadcrumb",
             },
             {
                 title: "Dialog",
