@@ -16,6 +16,18 @@ const docs = defineCollection({
             .optional(),
         code: s.mdx(),
         toc: s.toc(),
+        pagerPrev: s
+            .object({
+                link: s.string(),
+                title: s.string(),
+            })
+            .optional(),
+        pagerNext: s
+            .object({
+                link: s.string(),
+                title: s.string(),
+            })
+            .optional(),
     }),
 });
 

@@ -13,6 +13,9 @@ import {
 } from "@/components/ui/breadcrumb";
 import { MDXContent } from "@/website/components/docs/mdx-content";
 import { routes } from "@/website/utils/routes";
+import { DocsPager } from "@/website/components/docs/pager";
+import { createPagerPair } from "@/website/utils/pager";
+import { docsSidebarNavItems } from "@/app/docs/menu";
 
 interface PageProps {
     params: Promise<{
@@ -39,6 +42,13 @@ export default async function Page(props: PageProps) {
     if (!page) {
         notFound();
     }
+
+    const pager = createPagerPair({
+        items: docsSidebarNavItems,
+        activePath: url,
+        pagerPair: { prev: page.pagerPrev, next: page.pagerNext },
+    });
+
 
     return (
         <div className="flex md:gap-4 xl:gap-8 2xl:gap-16">
@@ -76,6 +86,9 @@ export default async function Page(props: PageProps) {
                         <MDXContent code={page.code} />
                     </div>
                 )}
+                <div className="my-12">
+                    <DocsPager prev={pager.prev} next={pager.next} />
+                </div>
             </div>
             <div className="sticky top-24 hidden max-h-[calc(100vh-100px)] w-52 xl:block">Table of Contents</div>
         </div>
