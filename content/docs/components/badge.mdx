@@ -1,0 +1,73 @@
+---
+slug: components-badge
+title: Badge
+description: To display a small indicator for notifications, status, or counts
+---
+
+<DemoCodePreview
+    path="docs/badge/default"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "solid",
+            values: ["solid", "outline", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Examples
+
+### With Icon
+
+The badge with icon looks great!
+
+<DemoCodePreview
+    path="docs/badge/with-icon"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "soft",
+            values: ["solid", "outline", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "primary",
+            values: ["default", "primary", "secondary", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "lg",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Props
+
+| Prop    | Type                                    | Default |
+|---------|-----------------------------------------|---------|
+| variant | `solid` `outline` `soft`                | solid   |
+| size    | `sm` `md` `lg `                         | md      |
+| color   | `default` `primary` `secondary` `error` | default |

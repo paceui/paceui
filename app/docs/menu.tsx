@@ -31,12 +31,16 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: components + "/alert",
             },
             {
-                title: "Button",
-                link: components + "/button",
+                title: "Badge",
+                link: components + "/badge",
             },
             {
                 title: "Breadcrumb",
                 link: components + "/breadcrumb",
+            },
+            {
+                title: "Button",
+                link: components + "/button",
             },
             {
                 title: "Label",
