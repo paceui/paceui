@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { MDXContent } from "@/website/components/docs/mdx-content";
 import { DocsPager } from "@/website/components/docs/pager";
+import { TableOfContent } from "@/website/components/docs/toc";
 import { createPagerPair } from "@/website/utils/pager";
 import { routes } from "@/website/utils/routes";
 
@@ -89,7 +90,9 @@ export default async function Page(props: PageProps) {
                     <DocsPager prev={pager.prev} next={pager.next} />
                 </div>
             </div>
-            <div className="sticky top-24 hidden max-h-[calc(100vh-100px)] w-52 xl:block">Table of Contents</div>
+            <div className="sticky top-24 hidden max-h-[calc(100vh-100px)] w-52 xl:block">
+                <TableOfContent entries={page.toc} />
+            </div>
         </div>
     );
 }

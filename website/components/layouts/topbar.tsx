@@ -35,7 +35,7 @@ export const Topbar = ({ menuItems }: TopbarProps) => {
                 {
                     title: "Components",
                     link: routes.docs.components.home,
-                }
+                },
             ],
         },
         ...(menuItems ?? []),

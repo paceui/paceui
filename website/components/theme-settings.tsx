@@ -24,10 +24,10 @@ export const ThemeSettings = () => {
                 </Button>
             </PopoverTrigger>
             <PopoverContent className="w-44 py-3">
-                <p className="text-sm font-medium text-opacity-60">Base</p>
+                <p className="text-opacity-60 text-sm font-medium">Base</p>
                 <div className="-mx-2 mt-1">
                     <div
-                        className="flex cursor-pointer items-center gap-2 px-2 py-0.5 hover:bg-default-100"
+                        className="hover:bg-default-100 flex cursor-pointer items-center gap-2 px-2 py-0.5"
                         onClick={() => changeThemeBase("neutral")}>
                         <div className="size-4 rounded-full bg-neutral-500"></div>
                         <p>Neutral</p>
@@ -40,7 +40,7 @@ export const ThemeSettings = () => {
                         </span>
                     </div>
                     <div
-                        className="flex cursor-pointer items-center gap-2 px-2 py-0.5 hover:bg-default-100"
+                        className="hover:bg-default-100 flex cursor-pointer items-center gap-2 px-2 py-0.5"
                         onClick={() => changeThemeBase("slate")}>
                         <div className="size-4 rounded-full bg-slate-500"></div>
                         <p>Slate</p>
@@ -53,7 +53,7 @@ export const ThemeSettings = () => {
                         </span>
                     </div>
                     <div
-                        className="flex cursor-pointer items-center gap-2 px-2 py-0.5 hover:bg-default-100"
+                        className="hover:bg-default-100 flex cursor-pointer items-center gap-2 px-2 py-0.5"
                         onClick={() => changeThemeBase("gray")}>
                         <div className="size-4 rounded-full bg-gray-500"></div>
                         <p>Gray</p>
@@ -66,7 +66,7 @@ export const ThemeSettings = () => {
                         </span>
                     </div>
                     <div
-                        className="flex cursor-pointer items-center gap-2 px-2 py-0.5 hover:bg-default-100"
+                        className="hover:bg-default-100 flex cursor-pointer items-center gap-2 px-2 py-0.5"
                         onClick={() => changeThemeBase("zinc")}>
                         <div className="size-4 rounded-full bg-zinc-500"></div>
                         <p>Zinc</p>
@@ -79,10 +79,10 @@ export const ThemeSettings = () => {
                         </span>
                     </div>
                 </div>
-                <p className="mt-2 text-sm font-medium text-opacity-60">Primary</p>
+                <p className="text-opacity-60 mt-2 text-sm font-medium">Primary</p>
                 <div className="-mx-2 mt-1">
                     <div
-                        className="flex cursor-pointer items-center gap-2 px-2 py-0.5 hover:bg-default-100"
+                        className="hover:bg-default-100 flex cursor-pointer items-center gap-2 px-2 py-0.5"
                         onClick={() => changeThemePrimary("blue")}>
                         <div className="size-4 rounded-full bg-blue-500"></div>
                         <p>Blue</p>
@@ -95,7 +95,7 @@ export const ThemeSettings = () => {
                         </span>
                     </div>
                     <div
-                        className="flex cursor-pointer items-center gap-2 px-2 py-0.5 hover:bg-default-100"
+                        className="hover:bg-default-100 flex cursor-pointer items-center gap-2 px-2 py-0.5"
                         onClick={() => changeThemePrimary("purple")}>
                         <div className="size-4 rounded-full bg-purple-500"></div>
                         <p>Purple</p>
@@ -108,7 +108,7 @@ export const ThemeSettings = () => {
                         </span>
                     </div>
                     <div
-                        className="flex cursor-pointer items-center gap-2 px-2 py-0.5 hover:bg-default-100"
+                        className="hover:bg-default-100 flex cursor-pointer items-center gap-2 px-2 py-0.5"
                         onClick={() => changeThemePrimary("green")}>
                         <div className="size-4 rounded-full bg-green-500"></div>
                         <p>Green</p>
@@ -121,7 +121,7 @@ export const ThemeSettings = () => {
                         </span>
                     </div>
                     <div
-                        className="flex cursor-pointer items-center gap-2 px-2 py-0.5 hover:bg-default-100"
+                        className="hover:bg-default-100 flex cursor-pointer items-center gap-2 px-2 py-0.5"
                         onClick={() => changeThemePrimary("teal")}>
                         <div className="size-4 rounded-full bg-teal-500"></div>
                         <p>Teal</p>
@@ -134,7 +134,7 @@ export const ThemeSettings = () => {
                         </span>
                     </div>
                     <div
-                        className="flex cursor-pointer items-center gap-2 px-2 py-0.5 hover:bg-default-100"
+                        className="hover:bg-default-100 flex cursor-pointer items-center gap-2 px-2 py-0.5"
                         onClick={() => changeThemePrimary("orange")}>
                         <div className="size-4 rounded-full bg-orange-500"></div>
                         <p>Orange</p>
@@ -147,7 +147,7 @@ export const ThemeSettings = () => {
                         </span>
                     </div>
                     <div
-                        className="flex cursor-pointer items-center gap-2 px-2 py-0.5 hover:bg-default-100"
+                        className="hover:bg-default-100 flex cursor-pointer items-center gap-2 px-2 py-0.5"
                         onClick={() => changeThemePrimary("rose")}>
                         <div className="size-4 rounded-full bg-rose-500"></div>
                         <p>Rose</p>

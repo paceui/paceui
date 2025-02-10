@@ -1,7 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import {createContext, ReactNode, useContext, useEffect, useMemo} from "react";
+import { ReactNode, createContext, useContext, useEffect, useMemo } from "react";
 
 import { useLocalStorage } from "@/website/hooks/use-local-storage";
 
