@@ -16,7 +16,7 @@ export const Demo = () => {
             <BreadcrumbList>
                 <BreadcrumbItem>
                     <BreadcrumbLink asChild>
-                        <Link href="#">NeroUI</Link>
+                        <Link href="#">PaceUI</Link>
                     </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />

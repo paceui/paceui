@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils";
 import "@/website/styles/app.css";
 
 export const metadata: Metadata = {
-    title: { template: "%s | NeroUI", default: "NeroUI" },
-    description: "Tired of the same design across every website? NeroUI is here to change that",
+    title: { template: "%s | PaceUI", default: "PaceUI" },
+    description: "Tired of the same design across every website? PaceUI is here to change that",
 };
 
 const sansFont = Work_Sans({ subsets: ["latin"], variable: "--font-sans" });
