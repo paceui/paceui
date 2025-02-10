@@ -1,0 +1,99 @@
+---
+slug: components-avatar
+title: Avatar
+description: An image element representing the user, with a fallback
+links:
+    api: https://www.radix-ui.com/docs/primitives/components/avatar#api-reference
+---
+
+<DemoCodePreview
+    path="docs/avatar/default"
+    props={[
+        {
+            title: "Shape",
+            name: "shape",
+            type: "select",
+            defaultValue: "round",
+            values: ["round", "square"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Examples
+
+### Only Text
+
+If only `AvatarFallback` is provided, it will display the fallback content
+
+<DemoCodePreview
+    path="docs/avatar/only-text"
+    props={[
+        {
+            title: "Shape",
+            name: "shape",
+            type: "select",
+            defaultValue: "round",
+            values: ["round", "square"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+    ]}
+/>
+
+### Icon
+
+Use `Icon` in `AvatarFallback` to display an icon as avatar
+
+<DemoCodePreview
+    path="docs/avatar/icon"
+    props={[
+        {
+            title: "Shape",
+            name: "shape",
+            type: "select",
+            defaultValue: "round",
+            values: ["round", "square"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+    ]}
+/>
+
+## Props
+
+| Prop  | Type                                    | Default |
+| ----- | --------------------------------------- | ------- |
+| shape | `round` `square`                        | round   |
+| size  | `sm` `md` `lg`                          | md      |
+| color | `default` `primary` `secondary` `error` | default |

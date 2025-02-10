@@ -31,6 +31,10 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: components + "/alert",
             },
             {
+                title: "Avatar",
+                link: components + "/avatar",
+            },
+            {
                 title: "Badge",
                 link: components + "/badge",
             },
