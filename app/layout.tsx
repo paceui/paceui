@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Fira_Code, Work_Sans } from "next/font/google";
 import React from "react";
 
 import { cn } from "@/lib/utils";
+import { ConfigProvider } from "@/website/contexts/config";
 import "@/website/styles/app.css";
 
 export const metadata: Metadata = {
@@ -20,7 +22,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={cn("font-sans", sansFont.variable, monoFont.variable)}>{children}</body>
+            <body className={cn("font-sans", sansFont.variable, monoFont.variable)}>
+                <NextThemesProvider attribute="class" defaultTheme="light">
+                    <ConfigProvider>{children}</ConfigProvider>
+                </NextThemesProvider>
+            </body>
         </html>
     );
 }

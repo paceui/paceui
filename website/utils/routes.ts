@@ -8,4 +8,7 @@ export const routes = {
             base: "/docs/components",
         },
     },
+    externalLinks: {
+        github: "https://github.com/paceui/paceui",
+    },
 };
