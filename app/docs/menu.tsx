@@ -51,6 +51,10 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: components + "/label",
             },
             {
+                title: "Popover",
+                link: components + "/popover",
+            },
+            {
                 title: "Select",
                 link: components + "/select",
             },
