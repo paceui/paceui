@@ -47,6 +47,10 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: components + "/button",
             },
             {
+                title: "Card",
+                link: components + "/card",
+            },
+            {
                 title: "Dropdown Menu",
                 link: components + "/dropdown-menu",
             },
@@ -63,6 +67,10 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: components + "/select",
             },
             {
+                title: "Separator",
+                link: components + "/separator",
+            },
+            {
                 title: "Switch",
                 link: components + "/switch",
             },
@@ -73,9 +81,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
         icon: <HourglassIcon />,
         comingSoon: true,
         items: [
-            {
-                title: "Card",
-            },
             {
                 title: "Checkbox",
             },
