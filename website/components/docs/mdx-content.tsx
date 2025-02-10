@@ -1,10 +1,14 @@
 import Link from "next/link";
+import React from "react";
 
 import * as runtime from "react/jsx-runtime";
 
 import { cn } from "@/lib/utils";
 
+import { Callout } from "./callout";
+import { CodePreview } from "./code-preview";
 import { DemoCodePreview } from "./demo-code-preview";
+import { InstallationCommand } from "./installation-command";
 
 const sharedComponents = {
     h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
@@ -45,6 +49,13 @@ const sharedComponents = {
             {...props}
         />
     ),
+    Step: ({ className, ...props }: React.ComponentProps<"h3">) => (
+        <h3
+            className={cn("font-heading step mt-8 mb-4 scroll-m-20 text-[16px] font-medium tracking-tight", className)}
+            {...props}
+        />
+    ),
+    Steps: ({ ...props }) => <div className="mb-12 ml-4 border-l pl-8 [counter-reset:step]" {...props} />,
     table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
         <div className="my-6 w-full overflow-y-auto">
             <table className={cn("w-full", className)} {...props} />
@@ -73,6 +84,9 @@ const sharedComponents = {
     ),
     Link,
     DemoCodePreview,
+    Callout,
+    CodePreview,
+    InstallationCommand,
 };
 
 const useMDXComponent = (code: string) => {

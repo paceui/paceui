@@ -1,0 +1,159 @@
+---
+slug: installations-manual
+title: Manual
+description: Manually add the dependencies to your project.
+---
+
+<Steps>
+
+    <Step> Add Tailwind CSS</Step>
+
+    The components are styled with Tailwind CSS, so you'll need to install Tailwind CSS in your project.
+
+    Follow the [Tailwind CSS installation](https://tailwindcss.com/docs/installation) guide to get started.
+
+    <Step> Add dependencies</Step>
+
+    Add these dependencies to your project:
+
+    <InstallationCommand command="npm install tailwind-variants clsx tailwind-merge lucide-react" />
+
+    <Step>Add tailwind color config to `@theme` layer</Step>
+
+    Here's app.css file looks like:
+
+    <CodePreview lang="css" code={`@theme {
+    /* ...Other variables */
+
+    /* Layout Colors */
+    --color-background: var(--color-background);
+    --color-foreground: var(--color-foreground);
+    --color-card: var(--color-card);
+    --color-card-foreground: var(--color-card-foreground);
+    --color-popover: var(--color-popover);
+    --color-popover-foreground: var(--color-popover-foreground);
+    --color-border: var(--color-border);
+    --color-ring: var(--color-ring);
+
+    /* Base Colors */
+    --color-default-50: var(--color-default-50);
+    --color-default-100: var(--color-default-100);
+    --color-default-200: var(--color-default-200);
+    --color-default-300: var(--color-default-300);
+    --color-default-400: var(--color-default-400);
+    --color-default-500: var(--color-default-500);
+    --color-default-600: var(--color-default-600);
+    --color-default-700: var(--color-default-700);
+    --color-default-800: var(--color-default-800);
+    --color-default-900: var(--color-default-900);
+    --color-default-950: var(--color-default-950);
+
+    /* Brand Colors */
+    --color-primary: var(--color-primary);
+    --color-primary-foreground: var(--color-primary-foreground);
+    --color-secondary: var(--color-secondary);
+    --color-secondary-foreground: var(--color-secondary-foreground);
+    --color-error: var(--color-error);
+    --color-error-foreground: var(--color-error-foreground);
+
+    /* ...Other variables */
+
+}`} />
+
+    <Step>Adding color values for those variables</Step>
+
+    Add the following to your app.css file.
+
+    <CodePreview lang="css" code={`&:root {
+    /* Layout = Neutral */
+    --color-background: hsl(0, 0%, 100%);
+    --color-foreground: hsl(240, 10%, 3.9%);
+    --color-card: hsl(0, 0%, 100%);
+    --color-card-foreground: hsl(240, 10%, 3.9%);
+    --color-popover: hsl(0, 0%, 100%);
+    --color-popover-foreground: hsl(240, 10%, 3.9%);
+    --color-border: hsl(240, 5.9%, 90%);
+    --color-ring: hsl(0, 0%, 64%);
+
+    /* Base = Neutral */
+    --color-default-50: hsl(0, 0%, 98%);
+    --color-default-100: hsl(0, 0%, 96%);
+    --color-default-200: hsl(0, 0%, 90%);
+    --color-default-300: hsl(0, 0%, 83%);
+    --color-default-400: hsl(0, 0%, 64%);
+    --color-default-500: hsl(0, 0%, 45%);
+    --color-default-600: hsl(0, 0%, 32%);
+    --color-default-700: hsl(0, 0%, 25%);
+    --color-default-800: hsl(0, 0%, 15%);
+    --color-default-900: hsl(0, 0%, 9%);
+    --color-default-950: hsl(0, 0%, 4%);
+
+    /* Brand = Blue */
+    --color-primary: hsl(233, 88%, 62%);
+    --color-primary-foreground: hsl(0, 0%, 98%);
+    --color-secondary: hsl(233, 32%, 40%);
+    --color-secondary-foreground: hsl(0, 0%, 98%);
+    --color-error: hsl(0, 84.2%, 60.2%);
+    --color-error-foreground: hsl(0, 0%, 98%);
+
+    &.dark {
+        /* Layout = Neutral (Dark) */
+        --color-background: hsl(240, 10%, 3.9%);
+        --color-foreground: hsl(0, 0%, 98%);
+        --color-card: hsl(240, 10%, 3.9%);
+        --color-card-foreground: hsl(0, 0%, 98%);
+        --color-popover: hsl(240, 10%, 3.9%);
+        --color-popover-foreground: hsl(0, 0%, 98%);
+        --color-border: hsl(240, 3.7%, 15.9%);
+
+        /* Base = Neutral (Dark)*/
+        --color-default-950: hsl(0, 0%, 98%);
+        --color-default-900: hsl(0, 0%, 96%);
+        --color-default-800: hsl(0, 0%, 90%);
+        --color-default-700: hsl(0, 0%, 83%);
+        --color-default-600: hsl(0, 0%, 64%);
+        --color-default-500: hsl(0, 0%, 45%);
+        --color-default-400: hsl(0, 0%, 32%);
+        --color-default-300: hsl(0, 0%, 25%);
+        --color-default-200: hsl(0, 0%, 15%);
+        --color-default-100: hsl(0, 0%, 9%);
+        --color-default-50: hsl(0, 0%, 4%);
+    }
+
+}`} />
+
+    <Step>Edit tsconfig.json file (If your project in typescript)</Step>
+
+    Add the following code to the `tsconfig.app.json` file to resolve paths for your IDE:
+
+    <CodePreview lang="js" code={`{
+    "compilerOptions": {
+        // ...
+        "baseUrl": ".", // [!code highlight]
+        "paths": { // [!code highlight]
+            "@/*": [ // [!code highlight]
+                "./src/*" // [!code highlight]
+            ] // [!code highlight]
+        } // [!code highlight]
+    // ...
+    }
+
+}`} />
+
+    The `@` alias is just a preference. Feel free to use any other alias you prefer.
+
+    <Step>Add a `cn` utility function</Step>
+
+    <CodePreview lang="js" code={`import { clsx, type ClassValue } from "clsx"
+
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+    return twMerge(clsx(inputs))
+}`} />
+
+    <Step>That's it</Step>
+
+    You can now start adding components to your project.
+
+</Steps>

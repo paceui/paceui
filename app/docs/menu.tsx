@@ -1,4 +1,4 @@
-import { BookOpenTextIcon, HourglassIcon, ShapesIcon } from "lucide-react";
+import { BookOpenTextIcon, HourglassIcon, ShapesIcon, SquareDashedBottomCodeIcon } from "lucide-react";
 
 import { SidebarNavItem } from "@/website/components/layouts/sidebar";
 import { routes } from "@/website/utils/routes";
@@ -16,8 +16,33 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: base.home,
             },
             {
+                title: "Installation",
+                link: base.installation,
+            },
+            {
                 title: "Theme",
                 link: base.theme,
+            },
+        ],
+    },
+    {
+        title: "Installation",
+        icon: <SquareDashedBottomCodeIcon />,
+        expanded: false,
+        items: [
+            {
+                title: "Next.js",
+                link: base.installation + "/next",
+                comingSoon: true,
+            },
+            {
+                title: "Vite",
+                link: base.installation + "/vite",
+                comingSoon: true,
+            },
+            {
+                title: "Manual",
+                link: base.installation + "/manual",
             },
         ],
     },

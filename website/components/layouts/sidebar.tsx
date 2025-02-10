@@ -7,6 +7,7 @@ import { ReactNode } from "react";
 import { ClassNameValue } from "tailwind-merge";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 
@@ -81,6 +82,11 @@ const SidebarNavItem = ({ item, pathname }: { item: SidebarNavItem; pathname: st
             href={item.link ?? "#"}>
             {item.icon && <Slot className="size-4">{item.icon}</Slot>}
             {item.title}
+            {item.comingSoon && (
+                <Badge size="sm" variant="soft" className="ms-auto">
+                    Coming soon
+                </Badge>
+            )}
         </Link>
     );
 };
