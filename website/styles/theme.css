@@ -52,3 +52,207 @@
         --color-default-50: hsl(0, 0%, 4%);
     }
 }
+
+[data-theme-base="slate"] {
+    &:root {
+        --color-background: hsl(210, 40%, 99%);
+        --color-foreground: hsl(240, 10%, 3.9%);
+        --color-card: hsl(210, 40%, 99%);
+        --color-card-foreground: hsl(240, 10%, 3.9%);
+        --color-popover: hsl(210, 40%, 99%);
+        --color-popover-foreground: hsl(240, 10%, 3.9%);
+        --color-border: hsl(240, 5.9%, 90%);
+        --color-ring: hsl(215, 20.2%, 65%);
+
+        /* Custom Variables */
+        --color-default-50: hsl(210, 40%, 98%);
+        --color-default-100: hsl(210, 40%, 96%);
+        --color-default-200: hsl(214.3, 31.8%, 91%);
+        --color-default-300: hsl(212.7, 26.8%, 83%);
+        --color-default-400: hsl(215, 20.2%, 65%);
+        --color-default-500: hsl(215.4, 16.3%, 46%);
+        --color-default-600: hsl(215.3, 19.3%, 34%);
+        --color-default-700: hsl(215.3, 25%, 27%);
+        --color-default-800: hsl(217.2, 32.6%, 18%);
+        --color-default-900: hsl(222.2, 47.4%, 11%);
+        --color-default-950: hsl(228.6, 84%, 5%);
+    }
+
+    &.dark {
+        --color-background: hsl(240, 10%, 10%);
+        --color-foreground: hsl(210, 40%, 98%);
+        --color-card: hsl(240, 10%, 15%);
+        --color-card-foreground: hsl(210, 40%, 95%);
+        --color-popover: hsl(240, 10%, 15%);
+        --color-popover-foreground: hsl(210, 40%, 95%);
+        --color-border: hsl(240, 5.9%, 25%);
+
+        /* Custom Variables */
+        --color-default-50: hsl(228.6, 84%, 5%);
+        --color-default-100: hsl(222.2, 47.4%, 11%);
+        --color-default-200: hsl(217.2, 32.6%, 18%);
+        --color-default-300: hsl(215.3, 25%, 27%);
+        --color-default-400: hsl(215.3, 19.3%, 34%);
+        --color-default-500: hsl(215.4, 16.3%, 46%);
+        --color-default-600: hsl(215, 20.2%, 65%);
+        --color-default-700: hsl(212.7, 26.8%, 83%);
+        --color-default-800: hsl(214.3, 31.8%, 91%);
+        --color-default-900: hsl(210, 40%, 96%);
+        --color-default-950: hsl(210, 40%, 98%);
+    }
+}
+
+[data-theme-base="gray"] {
+    &:root {
+        --color-background: hsl(0, 0%, 100%);
+        --color-foreground: hsl(240, 10%, 3.9%);
+        --color-card: hsl(0, 0%, 100%);
+        --color-card-foreground: hsl(240, 10%, 3.9%);
+        --color-popover: hsl(0, 0%, 100%);
+        --color-popover-foreground: hsl(240, 10%, 3.9%);
+        --color-border: hsl(240, 5.9%, 90%);
+        --color-ring: hsl(217.9, 10.6%, 65%);
+
+        /* Custom Variables */
+        --color-default-50: hsl(210, 20%, 98%);
+        --color-default-100: hsl(220, 14.3%, 96%);
+        --color-default-200: hsl(220, 13%, 91%);
+        --color-default-300: hsl(216, 12.2%, 84%);
+        --color-default-400: hsl(217.9, 10.6%, 65%);
+        --color-default-500: hsl(220, 8.9%, 46%);
+        --color-default-600: hsl(215, 13.8%, 34%);
+        --color-default-700: hsl(216.9, 19.1%, 27%);
+        --color-default-800: hsl(215, 27.9%, 17%);
+        --color-default-900: hsl(220.9, 39.3%, 11%);
+        --color-default-950: hsl(224, 71.4%, 4%);
+    }
+
+    &.dark {
+        --color-background: hsl(240, 10%, 10%);
+        --color-foreground: hsl(0, 0%, 95%);
+        --color-card: hsl(240, 10%, 15%);
+        --color-card-foreground: hsl(0, 0%, 95%);
+        --color-popover: hsl(240, 10%, 15%);
+        --color-popover-foreground: hsl(0, 0%, 95%);
+        --color-border: hsl(240, 5.9%, 25%);
+        --color-ring: hsl(217.9, 10.6%, 65%);
+
+        /* Custom Variables */
+        --color-default-50: hsl(224, 71.4%, 4%);
+        --color-default-100: hsl(220.9, 39.3%, 11%);
+        --color-default-200: hsl(215, 27.9%, 17%);
+        --color-default-300: hsl(216.9, 19.1%, 27%);
+        --color-default-400: hsl(215, 13.8%, 34%);
+        --color-default-500: hsl(220, 8.9%, 46%);
+        --color-default-600: hsl(217.9, 10.6%, 65%);
+        --color-default-700: hsl(216, 12.2%, 84%);
+        --color-default-800: hsl(220, 13%, 91%);
+        --color-default-900: hsl(220, 14.3%, 96%);
+        --color-default-950: hsl(210, 20%, 98%);
+    }
+}
+
+[data-theme-base="zinc"] {
+    &:root {
+        --color-background: hsl(0, 0%, 100%);
+        --color-foreground: hsl(240, 10%, 3.9%);
+        --color-card: hsl(0, 0%, 100%);
+        --color-card-foreground: hsl(240, 10%, 3.9%);
+        --color-popover: hsl(0, 0%, 100%);
+        --color-popover-foreground: hsl(240, 10%, 3.9%);
+        --color-border: hsl(240, 5.9%, 90%);
+        --color-ring: hsl(240, 5%, 65%);
+
+        /* Custom Variables */
+        --color-default-50: hsl(0, 0%, 98%);
+        --color-default-100: hsl(240, 4.8%, 96%);
+        --color-default-200: hsl(240, 5.9%, 90%);
+        --color-default-300: hsl(240, 4.9%, 84%);
+        --color-default-400: hsl(240, 5%, 65%);
+        --color-default-500: hsl(240, 3.8%, 46%);
+        --color-default-600: hsl(240, 5.2%, 34%);
+        --color-default-700: hsl(240, 5.3%, 26%);
+        --color-default-800: hsl(240, 3.7%, 16%);
+        --color-default-900: hsl(240, 5.9%, 10%);
+        --color-default-950: hsl(240, 10%, 4%);
+    }
+
+    &.dark {
+        --color-background: hsl(240, 10%, 5%);
+        --color-foreground: hsl(0, 0%, 95%);
+        --color-card: hsl(240, 10%, 10%);
+        --color-card-foreground: hsl(0, 0%, 95%);
+        --color-popover: hsl(240, 10%, 5%);
+        --color-popover-foreground: hsl(0, 0%, 95%);
+        --color-border: hsl(240, 5.9%, 25%);
+        --color-ring: hsl(240, 5%, 50%);
+
+        /* Custom Variables */
+        --color-default-50: hsl(240, 10%, 4%);
+        --color-default-100: hsl(240, 5.9%, 10%);
+        --color-default-200: hsl(240, 3.7%, 16%);
+        --color-default-300: hsl(240, 5.3%, 26%);
+        --color-default-400: hsl(240, 5.2%, 34%);
+        --color-default-500: hsl(240, 3.8%, 46%);
+        --color-default-600: hsl(240, 5%, 65%);
+        --color-default-700: hsl(240, 4.9%, 84%);
+        --color-default-800: hsl(240, 5.9%, 90%);
+        --color-default-900: hsl(240, 4.8%, 96%);
+        --color-default-950: hsl(0, 0%, 98%);
+    }
+}
+
+[data-theme-primary="purple"] {
+    &:root {
+        --color-primary: hsl(260, 70%, 60%);
+        --color-primary-foreground: hsl(0, 0%, 98%);
+        --color-secondary: hsl(260, 32%, 40%);
+        --color-secondary-foreground: hsl(0, 0%, 98%);
+        --color-error: hsl(0, 84.2%, 60.2%);
+        --color-error-foreground: hsl(0, 0%, 98%);
+    }
+}
+
+[data-theme-primary="green"] {
+    &:root {
+        --color-primary: hsl(160, 84%, 36%);
+        --color-primary-foreground: hsl(0, 0%, 98%);
+        --color-secondary: hsl(160, 60%, 30%);
+        --color-secondary-foreground: hsl(0, 0%, 98%);
+        --color-error: hsl(0, 84.2%, 60.2%);
+        --color-error-foreground: hsl(0, 0%, 98%);
+    }
+}
+
+[data-theme-primary="teal"] {
+    &:root {
+        --color-primary: hsl(178, 84%, 36%);
+        --color-primary-foreground: hsl(0, 0%, 98%);
+        --color-secondary: hsl(178, 60%, 30%);
+        --color-secondary-foreground: hsl(0, 0%, 98%);
+        --color-error: hsl(0, 84.2%, 60.2%);
+        --color-error-foreground: hsl(0, 0%, 98%);
+    }
+}
+
+[data-theme-primary="orange"] {
+    &:root {
+        --color-primary: hsl(30, 100%, 50%);
+        --color-primary-foreground: hsl(0, 0%, 98%);
+        --color-secondary: hsl(30, 80%, 40%);
+        --color-secondary-foreground: hsl(0, 0%, 98%);
+        --color-error: hsl(0, 84.2%, 60.2%);
+        --color-error-foreground: hsl(0, 0%, 98%);
+    }
+}
+
+[data-theme-primary="rose"] {
+    &:root {
+        --color-primary: hsl(340, 89%, 63%);
+        --color-primary-foreground: hsl(0, 0%, 98%);
+        --color-secondary: hsl(340, 70%, 50%);
+        --color-secondary-foreground: hsl(0, 0%, 98%);
+        --color-error: hsl(0, 84.2%, 60.2%);
+        --color-error-foreground: hsl(0, 0%, 98%);
+    }
+}
