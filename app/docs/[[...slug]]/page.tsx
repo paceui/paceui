@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { docs } from "@/.velite";
+import { docsSidebarNavItems } from "@/app/docs/menu";
 import {
     BreadcrumbItem,
     BreadcrumbLink,
@@ -12,10 +13,9 @@ import {
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { MDXContent } from "@/website/components/docs/mdx-content";
-import { routes } from "@/website/utils/routes";
 import { DocsPager } from "@/website/components/docs/pager";
 import { createPagerPair } from "@/website/utils/pager";
-import { docsSidebarNavItems } from "@/app/docs/menu";
+import { routes } from "@/website/utils/routes";
 
 interface PageProps {
     params: Promise<{
@@ -48,7 +48,6 @@ export default async function Page(props: PageProps) {
         activePath: url,
         pagerPair: { prev: page.pagerPrev, next: page.pagerNext },
     });
-
 
     return (
         <div className="flex md:gap-4 xl:gap-8 2xl:gap-16">

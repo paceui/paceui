@@ -21,7 +21,7 @@ export const DocsPager = ({ next, prev }: PagerPair) => {
                     <Link href={prev.link} className="inline-flex gap-3">
                         <ChevronLeftIcon className="mr-2 size-4" />
                         <div className="text-end">
-                            <p className="text-xs/none text-default-600">Previous</p>
+                            <p className="text-default-600 text-xs/none">Previous</p>
                             <p className="mt-1 text-base/none font-medium">{prev.title}</p>
                         </div>
                     </Link>
@@ -31,7 +31,7 @@ export const DocsPager = ({ next, prev }: PagerPair) => {
                 <Button variant="outline" asChild className="ml-auto h-fit px-3.5 py-2.5 transition-[background]">
                     <Link href={next.link} className="inline-flex gap-3">
                         <div className="text-start">
-                            <p className="text-xs/none text-default-600">Next</p>
+                            <p className="text-default-600 text-xs/none">Next</p>
                             <p className="mt-1 text-base/none font-medium">{next.title}</p>
                         </div>
                         <ChevronRightIcon className="ml-2 size-4" />

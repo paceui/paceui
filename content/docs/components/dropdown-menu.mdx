@@ -1,0 +1,182 @@
+---
+slug: components-dropdown-menu
+title: Dropdown Menu
+description: Displays a list of options that can be selected by the user, typically triggered by a click or hover
+links:
+    api: https://www.radix-ui.com/docs/primitives/components/dropdown-menu#api-reference
+---
+
+<DemoCodePreview
+    path="docs/dropdown-menu/default"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "soft",
+            values: ["solid", "outline", "soft", "ghost"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+    ]}
+/>
+
+## Examples
+
+### Group
+
+Use `<DropdownGroup />` to organize items into individual sections
+
+<DemoCodePreview
+    path="docs/dropdown-menu/grouped"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "soft",
+            values: ["solid", "outline", "soft", "ghost"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+    ]}
+/>
+
+### Checkboxes
+
+Use `<DropdownMenuCheckboxItem />` to render an item with a checkbox appearance
+
+<DemoCodePreview
+    path="docs/dropdown-menu/checkboxes"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "soft",
+            values: ["solid", "outline", "soft", "ghost"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+    ]}
+/>
+
+### Radio Group
+
+Use `<DropdownMenuRadioGroup />` & `<DropdownMenuRadioItem />` to render an item with a radio group appearance
+
+<DemoCodePreview
+    path="docs/dropdown-menu/radio-group"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "soft",
+            values: ["solid", "outline", "soft", "ghost"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+    ]}
+/>
+
+### Side
+
+Setting the side prop to `top` `bottom` `left` or `right` in `<DropdownMenuContent />` will open the menu at the specified position (default is bottom).
+
+<DemoCodePreview
+    path="docs/dropdown-menu/side"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "soft",
+            values: ["solid", "outline", "soft", "ghost"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+    ]}
+/>
+
+### Align
+
+Setting the align prop to `start` `center` or `end` in `<DropdownMenuContent />` will open the menu at the specified position (default is center).
+
+<DemoCodePreview
+    path="docs/dropdown-menu/align"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "soft",
+            values: ["solid", "outline", "soft", "ghost"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+    ]}
+/>
+
+### Controlled
+
+<DemoCodePreview
+    path="docs/dropdown-menu/controlled"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "soft",
+            values: ["solid", "outline", "soft", "ghost"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+    ]}
+/>
+
+## Props
+
+### DropdownMenuItem
+
+Use same props to: `<DropdownMenuSubTrigger />` `<DropdownMenuCheckboxItem />` `<DropdownMenuRadioItem />`
+
+| Prop    | Type                                    | Default |
+| ------- | --------------------------------------- | ------- |
+| variant | `solid` `outline` `soft` `ghost`        | soft    |
+| color   | `default` `primary` `secondary` `error` | default |

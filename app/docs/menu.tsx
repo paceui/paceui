@@ -43,6 +43,10 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: components + "/button",
             },
             {
+                title: "Dropdown Menu",
+                link: components + "/dropdown-menu",
+            },
+            {
                 title: "Label",
                 link: components + "/label",
             },
@@ -69,9 +73,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             },
             {
                 title: "Dialog",
-            },
-            {
-                title: "Dropdown Menu",
             },
         ],
     },
