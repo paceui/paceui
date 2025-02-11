@@ -8,9 +8,9 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 
-export const Demo = () => {
+export const Demo = ({ ...props }) => {
     return (
-        <Select>
+        <Select {...props}>
             <SelectTrigger className="w-60">
                 <SelectValue placeholder="Select a language" />
             </SelectTrigger>
