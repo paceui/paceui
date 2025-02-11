@@ -1,0 +1,2 @@
+# Ignoring the .mdx file temporarily due to extra spaces in the CodePreview component. This will be re-enabled in future updates
+**/*.mdx

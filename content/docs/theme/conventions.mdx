@@ -1,0 +1,79 @@
+---
+slug: theme-convention
+title: Theme Convention
+description: Provides color token knowledge and usage guidelines.
+---
+
+We follow a simple convention for colors: the `background` variable sets the component's background color, while the `foreground` variable sets the text color on that background.
+
+### Variable list
+
+Here's a list of variables you can customize:
+
+<Steps>
+    <Step>Background</Step>
+
+    Use background for the body `background` and `foreground` for the text color.
+
+    <CodePreview lang="css" code={`--color-background: var(--color-background);
+--color-foreground: var(--color-foreground);`}/>
+
+    <Step>Card</Step>
+
+    Use `background` for the card's background and `foreground` for the card's text color.
+
+    <CodePreview lang="css" code={`--color-card: var(--color-card);
+--color-card-foreground: var(--color-card-foreground);`}/>
+
+    <Step>Popover</Step>
+
+    Use `background` for the popover's background and `foreground` for the popover's text color.
+
+    <CodePreview lang="css" code={`--color-popover: var(--color-popover);
+--color-popover-foreground: var(--color-popover-foreground);`}/>
+
+    <Step>Other</Step>
+
+    You can set the border, ring color, and default border radius.
+
+    <CodePreview lang="css" code={`--color-border: var(--color-border);
+--color-ring: var(--color-ring)`}/>
+
+    <Step>Primary</Step>
+
+    Use for primary action buttons or elements.
+
+    <CodePreview lang="css" code={`--color-primary: var(--color-primary);
+--color-primary-foreground: var(--color-primary-foreground);`}/>
+
+    <Step>Secondary</Step>
+
+    Use for secondary action buttons or elements with lower impact.
+
+    <CodePreview lang="css" code={`--color-secondary: var(--color-secondary);
+--color-secondary-foreground: var(--color-secondary-foreground)`}/>
+
+    <Step>Error</Step>
+
+    Use for error messages or elements indicating an error state.
+
+    <CodePreview lang="css" code={`--color-error: var(--color-error);
+--color-error-foreground: var(--color-error-foreground)`}/>
+
+    <Step>Default</Step>
+
+    This is a default palette used across various use cases, as described below.
+
+    <CodePreview lang="css" code={`--color-default-50: var(--color-default-50);     /* background */
+--color-default-100: var(--color-default-100);   /* hover or active background */
+--color-default-200: var(--color-default-200);   /* border, divider, input, etc */
+--color-default-300: var(--color-default-300);   /* - */
+--color-default-400: var(--color-default-400);   /* - */
+--color-default-500: var(--color-default-500);   /* disabled content */
+--color-default-600: var(--color-default-600);   /* muted content */
+--color-default-700: var(--color-default-700);   /* hover for muted content */
+--color-default-800: var(--color-default-800);   /* text color */
+--color-default-900: var(--color-default-900);   /* contrast */
+--color-default-950: var(--color-default-950);   /* high contrast _/`} />
+
+</Steps>
