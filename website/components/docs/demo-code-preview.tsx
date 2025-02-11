@@ -19,7 +19,7 @@ export const DemoCodePreview = ({ path, props }: Props) => {
                 <DemoPreview path={path} props={props} />
             </TabsContent>
             <TabsContent value="code" className="mt-4">
-                <CodePreview path={"demo/" + path} />
+                <CodePreview path={"demo/" + path} removeExtraProps />
             </TabsContent>
         </Tabs>
     );

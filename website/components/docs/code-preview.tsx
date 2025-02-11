@@ -11,10 +11,11 @@ type Props = {
     path?: string;
     code?: string;
     collapsible?: boolean;
+    removeExtraProps?: boolean;
     lang?: CodeToHastOptionsCommon["lang"];
 };
 
-export const CodePreview = async ({ path, code, collapsible, lang = "tsx" }: Props) => {
+export const CodePreview = async ({ path, code, collapsible, removeExtraProps = false, lang = "tsx" }: Props) => {
     if (!code && path) code = await readFile(nodePath.join(process.cwd(), `/${path}.tsx`), "utf8");
 
     if (!code) {
@@ -22,6 +23,7 @@ export const CodePreview = async ({ path, code, collapsible, lang = "tsx" }: Pro
     }
 
     const filterText = (text: string): string => {
+        if (!removeExtraProps) return text;
         return text.replaceAll(/\{\s*\.\.\.props\s*}/g, "");
     };
 
