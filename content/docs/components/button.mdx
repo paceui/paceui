@@ -4,4 +4,129 @@ title: Button
 description: Clickable element that triggers an action
 ---
 
-<DemoCodePreview path="docs/button/default" />
+<DemoCodePreview
+    path="docs/button/default"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "solid",
+            values: ["solid", "outline", "soft", "ghost"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Examples
+
+### Only Icon
+
+Set the `onlyIcon` prop to `true` to style the button as an icon only
+
+<DemoCodePreview
+    path="docs/button/only-icon"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "solid",
+            values: ["solid", "outline", "soft", "ghost"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### With Icon
+
+<DemoCodePreview
+    path="docs/button/with-icon"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "soft",
+            values: ["solid", "outline", "soft", "ghost"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "primary",
+            values: ["default", "primary", "secondary", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### Loading
+
+<DemoCodePreview
+    path="docs/button/loading"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "solid",
+            values: ["solid", "outline", "soft", "ghost"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Props
+
+| Prop     | Type                                    | Default |
+| -------- | --------------------------------------- | ------- |
+| variant  | `solid` `outline` `soft` `ghost`        | solid   |
+| size     | `sm` `md` `lg`                          | md      |
+| color    | `default` `primary` `secondary` `error` | default |
+| onlyIcon | Boolean                                 | false   |
