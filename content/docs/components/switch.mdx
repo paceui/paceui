@@ -7,3 +7,100 @@ links:
 ---
 
 <DemoCodePreview path="docs/switch/default" />
+
+## Examples
+
+### Disabled
+
+<DemoCodePreview
+    path="docs/switch/disabled"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "solid",
+            values: ["solid", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### Label
+
+<DemoCodePreview
+    path="docs/switch/label"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "solid",
+            values: ["solid", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "sm",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### Controlled
+
+<DemoCodePreview
+    path="docs/switch/controlled"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "solid",
+            values: ["solid", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "sm",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Props
+
+| Prop    | Type                                    | Description           | Default |
+| ------- | --------------------------------------- | --------------------- | ------- |
+| variant | `solid` `soft`                          | To change the variant | solid   |
+| color   | `default` `primary` `secondary` `error` | To change the color   | default |
+| size    | `sm` `md` `lg `                         | To change the size    | md      |
