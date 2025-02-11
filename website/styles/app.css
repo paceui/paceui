@@ -2,3 +2,5 @@
 @import "./docs.css";
 @import "./animation.css";
 @import "./theme.css";
+
+@plugin "tailwindcss-animate";
