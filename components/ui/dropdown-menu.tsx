@@ -21,6 +21,7 @@ export const dropdownItemTheme = tv({
             default: "",
             primary: "",
             secondary: "",
+            success: "",
             error: "",
         },
     },
@@ -39,6 +40,11 @@ export const dropdownItemTheme = tv({
             variant: "solid",
             color: "secondary",
             className: "hover:bg-secondary hover:text-secondary-foreground",
+        },
+        {
+            variant: "solid",
+            color: "success",
+            className: "hover:bg-success hover:text-success-foreground",
         },
         {
             variant: "solid",
@@ -62,6 +68,11 @@ export const dropdownItemTheme = tv({
         },
         {
             variant: "outline",
+            color: "success",
+            className: "hover:border-success/60 hover:bg-success/10 hover:text-success",
+        },
+        {
+            variant: "outline",
             color: "error",
             className: "hover:border-error/60 hover:bg-error/10 hover:text-error",
         },
@@ -79,6 +90,11 @@ export const dropdownItemTheme = tv({
             variant: "soft",
             color: "secondary",
             className: "hover:bg-secondary/10 hover:text-secondary",
+        },
+        {
+            variant: "soft",
+            color: "success",
+            className: "hover:bg-success/10 hover:text-success",
         },
         {
             variant: "soft",
@@ -100,6 +116,11 @@ export const dropdownItemTheme = tv({
             variant: "ghost",
             color: "secondary",
             className: "hover:text-secondary",
+        },
+        {
+            variant: "ghost",
+            color: "success",
+            className: "hover:text-success",
         },
         {
             variant: "ghost",
