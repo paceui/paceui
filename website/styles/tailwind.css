@@ -9,6 +9,14 @@
     --font-sans: var(--font-sans);
     --font-mono: var(--font-mono);
 
+    /* Radius */
+    --radius: 6px;
+    --radius-xs: calc(var(--radius) - 4px);
+    --radius-sm: calc(var(--radius) - 2px);
+    --radius-lg: calc(var(--radius) + 2px);
+    --radius-xl: calc(var(--radius) + 4px);
+
+    /* Layout Colors */
     --color-background: var(--color-background);
     --color-foreground: var(--color-foreground);
     --color-card: var(--color-card);
@@ -18,6 +26,7 @@
     --color-border: var(--color-border);
     --color-ring: var(--color-ring);
 
+    /* Base Colors */
     --color-default-50: var(--color-default-50);
     --color-default-100: var(--color-default-100);
     --color-default-200: var(--color-default-200);
@@ -30,6 +39,7 @@
     --color-default-900: var(--color-default-900);
     --color-default-950: var(--color-default-950);
 
+    /* Brand Colors */
     --color-primary: var(--color-primary);
     --color-primary-foreground: var(--color-primary-foreground);
     --color-secondary: var(--color-secondary);

@@ -25,6 +25,13 @@ description: Manually add the dependencies to your project.
     <CodePreview lang="css" code={`@theme {
     /* ...Other variables */
 
+    /* Radius */
+    --radius: 6px;
+    --radius-xs: calc(var(--radius) - 4px);
+    --radius-sm: calc(var(--radius) - 2px);
+    --radius-lg: calc(var(--radius) + 2px);
+    --radius-xl: calc(var(--radius) + 4px);
+
     /* Layout Colors */
     --color-background: var(--color-background);
     --color-foreground: var(--color-foreground);
