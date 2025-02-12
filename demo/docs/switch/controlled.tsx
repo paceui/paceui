@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 
 export const Demo = ({ ...props }) => {
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = useState(true);
 
     return (
         <div className="flex flex-col items-center space-y-2">

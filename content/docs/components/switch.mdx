@@ -6,7 +6,29 @@ links:
     api: https://www.radix-ui.com/docs/primitives/components/switch#api-reference
 ---
 
-<DemoCodePreview path="docs/switch/default" />
+<DemoCodePreview path="docs/switch/default" props={[
+    {
+        title: "Variant",
+        name: "variant",
+        type: "select",
+        defaultValue: "solid",
+        values: ["solid", "soft"],
+    },
+    {
+        title: "Color",
+        name: "color",
+        type: "select",
+        defaultValue: "default",
+        values: ["default", "primary", "secondary", "success", "error"],
+    },
+    {
+        title: "Size",
+        name: "size",
+        type: "select",
+        defaultValue: "md",
+        values: ["sm", "md", "lg"],
+    },
+]}/>
 
 ## Installation
 
@@ -93,14 +115,14 @@ links:
             title: "Variant",
             name: "variant",
             type: "select",
-            defaultValue: "solid",
+            defaultValue: "soft",
             values: ["solid", "soft"],
         },
         {
             title: "Color",
             name: "color",
             type: "select",
-            defaultValue: "default",
+            defaultValue: "primary",
             values: ["default", "primary", "secondary", "success", "error"],
         },
         {

@@ -6,6 +6,7 @@ export const Demo = () => {
             <Separator className="h-[3px]" />
             <Separator className="bg-primary/40 h-[3px]" />
             <Separator className="bg-secondary/40 h-[3px]" />
+            <Separator className="bg-success/40 h-[3px]" />
             <Separator className="bg-error/40 h-[3px]" />
         </div>
     );
