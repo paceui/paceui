@@ -15,6 +15,7 @@ export const buttonTheme = tv({
             default: "",
             primary: "",
             secondary: "",
+            success: "",
             error: "",
         },
         size: {
@@ -47,6 +48,11 @@ export const buttonTheme = tv({
         },
         {
             variant: "solid",
+            color: "success",
+            className: "bg-success text-success-foreground hover:bg-opacity-90",
+        },
+        {
+            variant: "solid",
             color: "error",
             className: "bg-error text-error-foreground hover:bg-opacity-90",
         },
@@ -64,6 +70,11 @@ export const buttonTheme = tv({
             variant: "outline",
             color: "secondary",
             className: "border-secondary text-secondary hover:bg-secondary/10",
+        },
+        {
+            variant: "outline",
+            color: "success",
+            className: "border-success text-success hover:bg-success/10",
         },
         {
             variant: "outline",
@@ -87,6 +98,11 @@ export const buttonTheme = tv({
         },
         {
             variant: "soft",
+            color: "success",
+            className: "bg-success/10 text-success hover:bg-success/15",
+        },
+        {
+            variant: "soft",
             color: "error",
             className: "bg-error/10 text-error hover:bg-error/15",
         },
@@ -105,6 +121,11 @@ export const buttonTheme = tv({
             variant: "ghost",
             color: "secondary",
             className: "text-secondary hover:bg-secondary/10",
+        },
+        {
+            variant: "ghost",
+            color: "success",
+            className: "text-success hover:bg-success/10",
         },
         {
             variant: "ghost",
