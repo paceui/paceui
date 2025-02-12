@@ -21,11 +21,13 @@
     --color-default-900: hsl(0, 0%, 9%);
     --color-default-950: hsl(0, 0%, 4%);
 
-    /* Brand Palette = Blue */
+    /* Brand = Blue */
     --color-primary: hsl(233, 88%, 62%);
     --color-primary-foreground: hsl(0, 0%, 98%);
     --color-secondary: hsl(233, 32%, 40%);
     --color-secondary-foreground: hsl(0, 0%, 98%);
+    --color-success: hsl(159, 95%, 36%);
+    --color-success-foreground: hsl(0, 0%, 98%);
     --color-error: hsl(0, 84.2%, 60.2%);
     --color-error-foreground: hsl(0, 0%, 98%);
 
@@ -208,6 +210,8 @@
         --color-primary-foreground: hsl(0, 0%, 98%);
         --color-secondary: hsl(260, 32%, 40%);
         --color-secondary-foreground: hsl(0, 0%, 98%);
+        --color-success: hsl(159, 95%, 36%);
+        --color-success-foreground: hsl(0, 0%, 98%);
         --color-error: hsl(0, 84.2%, 60.2%);
         --color-error-foreground: hsl(0, 0%, 98%);
     }
@@ -219,6 +223,8 @@
         --color-primary-foreground: hsl(0, 0%, 98%);
         --color-secondary: hsl(160, 60%, 30%);
         --color-secondary-foreground: hsl(0, 0%, 98%);
+        --color-success: hsl(159, 95%, 36%);
+        --color-success-foreground: hsl(0, 0%, 98%);
         --color-error: hsl(0, 84.2%, 60.2%);
         --color-error-foreground: hsl(0, 0%, 98%);
     }
@@ -230,6 +236,8 @@
         --color-primary-foreground: hsl(0, 0%, 98%);
         --color-secondary: hsl(178, 60%, 30%);
         --color-secondary-foreground: hsl(0, 0%, 98%);
+        --color-success: hsl(159, 95%, 36%);
+        --color-success-foreground: hsl(0, 0%, 98%);
         --color-error: hsl(0, 84.2%, 60.2%);
         --color-error-foreground: hsl(0, 0%, 98%);
     }
@@ -241,6 +249,8 @@
         --color-primary-foreground: hsl(0, 0%, 98%);
         --color-secondary: hsl(30, 80%, 40%);
         --color-secondary-foreground: hsl(0, 0%, 98%);
+        --color-success: hsl(159, 95%, 36%);
+        --color-success-foreground: hsl(0, 0%, 98%);
         --color-error: hsl(0, 84.2%, 60.2%);
         --color-error-foreground: hsl(0, 0%, 98%);
     }
@@ -252,6 +262,8 @@
         --color-primary-foreground: hsl(0, 0%, 98%);
         --color-secondary: hsl(340, 70%, 50%);
         --color-secondary-foreground: hsl(0, 0%, 98%);
+        --color-success: hsl(159, 95%, 36%);
+        --color-success-foreground: hsl(0, 0%, 98%);
         --color-error: hsl(0, 84.2%, 60.2%);
         --color-error-foreground: hsl(0, 0%, 98%);
     }

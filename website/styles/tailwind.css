@@ -44,6 +44,8 @@
     --color-primary-foreground: var(--color-primary-foreground);
     --color-secondary: var(--color-secondary);
     --color-secondary-foreground: var(--color-secondary-foreground);
+    --color-success: var(--color-success);
+    --color-success-foreground: var(--color-success-foreground);
     --color-error: var(--color-error);
     --color-error-foreground: var(--color-error-foreground);
 }
