@@ -13,6 +13,7 @@ const badgeTheme = tv({
             default: "",
             primary: "",
             secondary: "",
+            success: "",
             error: "",
         },
         size: {
@@ -39,6 +40,11 @@ const badgeTheme = tv({
         },
         {
             variant: "solid",
+            color: "success",
+            className: "bg-success text-success-foreground",
+        },
+        {
+            variant: "solid",
             color: "error",
             className: "bg-error text-error-foreground",
         },
@@ -51,6 +57,11 @@ const badgeTheme = tv({
             variant: "outline",
             color: "secondary",
             className: "border-secondary text-secondary",
+        },
+        {
+            variant: "outline",
+            color: "success",
+            className: "border-success text-success",
         },
         {
             variant: "outline",
@@ -71,6 +82,11 @@ const badgeTheme = tv({
             variant: "soft",
             color: "secondary",
             className: "bg-secondary/10 text-secondary",
+        },
+        {
+            variant: "soft",
+            color: "success",
+            className: "bg-success/10 text-success",
         },
         {
             variant: "soft",
