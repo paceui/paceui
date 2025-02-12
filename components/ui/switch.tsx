@@ -29,6 +29,9 @@ const switchTheme = tv({
             secondary: {
                 base: "data-[state=checked]:bg-secondary",
             },
+            success: {
+                base: "data-[state=checked]:bg-success",
+            },
             error: {
                 base: "data-[state=checked]:bg-error",
             },
@@ -72,6 +75,13 @@ const switchTheme = tv({
         },
         {
             variant: "solid",
+            color: "success",
+            className: {
+                base: "data-[state=checked]:bg-success",
+            },
+        },
+        {
+            variant: "solid",
             color: "error",
             className: {
                 base: "data-[state=checked]:bg-error",
@@ -99,6 +109,14 @@ const switchTheme = tv({
             className: {
                 base: "data-[state=checked]:bg-secondary/20",
                 thumb: "data-[state=checked]:bg-secondary",
+            },
+        },
+        {
+            variant: "soft",
+            color: "success",
+            className: {
+                base: "data-[state=checked]:bg-success/20",
+                thumb: "data-[state=checked]:bg-success",
             },
         },
         {
