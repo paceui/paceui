@@ -31,6 +31,7 @@ const selectTheme = tv({
             default: "",
             primary: "",
             secondary: "",
+            success: "",
             error: "",
         },
         size: {
@@ -57,6 +58,13 @@ const selectTheme = tv({
             color: "secondary",
             className: {
                 trigger: "border-secondary text-secondary",
+            },
+        },
+        {
+            variant: "outline",
+            color: "success",
+            className: {
+                trigger: "border-success text-success",
             },
         },
         {
@@ -89,6 +97,13 @@ const selectTheme = tv({
         },
         {
             variant: "soft",
+            color: "success",
+            className: {
+                trigger: "bg-success/10 text-success",
+            },
+        },
+        {
+            variant: "soft",
             color: "error",
             className: {
                 trigger: "bg-error/10 text-error",
@@ -113,6 +128,13 @@ const selectTheme = tv({
             color: "secondary",
             className: {
                 trigger: "border-secondary bg-secondary/10 text-secondary",
+            },
+        },
+        {
+            variant: "underline",
+            color: "success",
+            className: {
+                trigger: "border-success bg-success/10 text-success",
             },
         },
         {
