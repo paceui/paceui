@@ -1,0 +1,272 @@
+---
+slug: components-input
+title: Input
+description: Allows users to enter and submit data in a specified format
+---
+
+<DemoCodePreview
+    path="demo/docs/input/default.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft", "underline"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Installation
+
+<Steps>
+    <Step>
+        Copy and paste the following code into your project
+    </Step>
+    <CodePreview path='components/ui/input.tsx' collapsible></CodePreview>
+    <Step>
+        Update the import paths to fit your project setup
+    </Step>
+</Steps>
+
+## Examples
+
+### Start Content
+
+Pass any valid element to `startContent` to render custom prefix element into input
+
+<DemoCodePreview
+    path="demo/docs/input/start-content.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft", "underline"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### End Content
+
+Pass any valid element to `endContent` to render custom suffix element into input
+
+<DemoCodePreview
+    path="demo/docs/input/end-content.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft", "underline"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### Labelled
+
+Use `<Label />` to create an accessible input label
+
+<DemoCodePreview
+    path="demo/docs/input/labelled.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft", "underline"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### Helpers
+
+<DemoCodePreview
+    path="demo/docs/input/helpers.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft", "underline"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### States
+
+Use `readonly` to make an input uneditable and `disabled` to prevent user interaction entirely
+
+<DemoCodePreview
+    path="demo/docs/input/states.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft", "underline"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### Types
+
+<DemoCodePreview
+    path="demo/docs/input/types.tsx"
+    props={[
+        {
+            title: "Type",
+            name: "type",
+            type: "select",
+            defaultValue: "file",
+            values: ["file", "color", "number", "date", "time", "week", "month"],
+        },
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft", "underline"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### Controlled
+
+<DemoCodePreview
+    path="demo/docs/input/controlled.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft", "underline"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Props
+
+| Prop    | Type                                              | Default |
+|---------|---------------------------------------------------|---------|
+| variant | `outline` `soft` `underline`                      | outline |
+| size    | `sm` `md` `lg`                                    | md      |
+| color   | `default` `primary` `secondary` `success` `error` | default |

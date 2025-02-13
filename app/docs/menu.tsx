@@ -101,6 +101,10 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: components + "/dropdown-menu",
             },
             {
+                title: "Input",
+                link: components + "/input",
+            },
+            {
                 title: "Label",
                 link: components + "/label",
             },
