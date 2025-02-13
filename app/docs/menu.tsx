@@ -132,10 +132,46 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
         comingSoon: true,
         items: [
             {
+                title: "Accordion",
+            },
+            {
                 title: "Checkbox",
             },
             {
                 title: "Dialog",
+            },
+            {
+                title: "Pagination",
+            },
+            {
+                title: "Progress",
+            },
+            {
+                title: "Radio Group",
+            },
+            {
+                title: "Scroll Area",
+            },
+            {
+                title: "Skeleton",
+            },
+            {
+                title: "Slider",
+            },
+            {
+                title: "Table",
+            },
+            {
+                title: "Tabs",
+            },
+            {
+                title: "Textarea",
+            },
+            {
+                title: "Toggle",
+            },
+            {
+                title: "Tooltip",
             },
         ],
     },

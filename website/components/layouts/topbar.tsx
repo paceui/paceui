@@ -54,7 +54,7 @@ export const Topbar = ({ menuItems }: TopbarProps) => {
                         <Drawer.Overlay className="fixed inset-0 z-10 bg-black/40" />
                         <Drawer.Content className="fixed start-2 top-2 bottom-2 z-10 outline-none">
                             <Drawer.Title hidden>Hidden</Drawer.Title>
-                            <Sidebar items={items} className="bg-background w-60 rounded px-3 py-2" />
+                            <Sidebar items={items} className="bg-background w-64 rounded px-3 py-2" />
                         </Drawer.Content>
                     </Drawer.Portal>
                 </Drawer.Root>
