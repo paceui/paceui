@@ -113,7 +113,7 @@ export const DemoPreview = ({ path, component, props = [] }: IDemoPreview) => {
                                                     onValueChange={(value) =>
                                                         setCompProps({ ...compProps, [prop.name]: value })
                                                     }>
-                                                    <SelectTrigger className="mt-2 capitalize">
+                                                    <SelectTrigger className="mt-2 capitalize" aria-label="Select">
                                                         <SelectValue placeholder={prop.title} />
                                                     </SelectTrigger>
                                                     <SelectContent>

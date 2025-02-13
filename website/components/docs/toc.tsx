@@ -86,7 +86,11 @@ const TocSection = ({ section, activeId }: { section: TocEntry; activeId: string
         <>
             <TocItem item={section} activeId={activeId} />
             <ul className="mx-4 space-y-1">
-                {section.items?.map((item, index) => <TocItem key={index} item={item} activeId={activeId} />)}
+                {section.items?.map((item, index) => (
+                    <li key={index}>
+                        <TocItem item={item} activeId={activeId} />
+                    </li>
+                ))}
             </ul>
         </>
     );
