@@ -1,14 +1,28 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { getDemoComponent } from "@/website/utils/docs";
+import { fetchDemoFile } from "@/website/utils/server-file";
 
 import { CodePreview } from "./code-preview";
-import { DemoPreview, DemoPreviewProps } from "./demo-preview";
+import { DemoPreview, IDemoPreview } from "./demo-preview";
 
-type Props = {
+type IDemoCodePreview = {
     path: string;
-    props: DemoPreviewProps[];
+    props: IDemoPreview["props"];
 };
 
-export const DemoCodePreview = ({ path, props }: Props) => {
+export const DemoCodePreview = ({ path, props }: IDemoCodePreview) => {
+    const [code, setCode] = useState<string | undefined>(undefined);
+
+    useEffect(() => {
+        fetchDemoFile(path).then(setCode);
+    }, [path]);
+
+    const DemoComponent = useMemo(() => getDemoComponent(path), [path]);
+
     return (
         <Tabs defaultValue="preview" className="mt-3">
             <TabsList>
@@ -16,10 +30,10 @@ export const DemoCodePreview = ({ path, props }: Props) => {
                 <TabsTrigger value="code">Code</TabsTrigger>
             </TabsList>
             <TabsContent value="preview" className="mt-4">
-                <DemoPreview path={path} props={props} />
+                <DemoPreview component={DemoComponent} props={props} />
             </TabsContent>
             <TabsContent value="code" className="mt-4">
-                <CodePreview path={"demo/" + path} removeExtraProps />
+                <CodePreview code={code} removeExtraProps />
             </TabsContent>
         </Tabs>
     );

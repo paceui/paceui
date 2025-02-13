@@ -1,7 +1,6 @@
 "use client";
 
 import { Settings2Icon, XIcon } from "lucide-react";
-import dynamic from "next/dynamic";
 import React, { ComponentType, useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -9,10 +8,11 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { cn } from "@/lib/utils";
+import { getDemoComponent } from "@/website/utils/docs";
 
 export type ComponentPreviewProp = { [key: string]: string | boolean };
 
-export type DemoPreviewProps = {
+export type IDemoProp = {
     title: string;
     name: string;
 } & (
@@ -27,16 +27,19 @@ export type DemoPreviewProps = {
       }
 );
 
-export const DemoPreview = ({ path, props = [] }: { path: string; props: DemoPreviewProps[] }) => {
+export type IDemoPreview = {
+    path?: string;
+    component?: ComponentType<ComponentPreviewProp>;
+    props: IDemoProp[];
+};
+
+export const DemoPreview = ({ path, component, props = [] }: IDemoPreview) => {
     const [showPropChanger, setShowPropChanger] = useState(false);
 
-    const getComponent = (name: string) =>
-        dynamic<ComponentPreviewProp>(() => import(`@/demo/${name}`).then((e) => e.Demo), {
-            loading: () => <p>Loading</p>,
-            ssr: false,
-        });
-
-    const Demo = useMemo<ComponentType<ComponentPreviewProp>>(() => getComponent(path), [path]);
+    const Demo = useMemo<ComponentType<ComponentPreviewProp> | undefined>(
+        () => component ?? (path ? getDemoComponent(path) : undefined),
+        [path, component],
+    );
 
     const [compProps, setCompProps] = useState<ComponentPreviewProp>(() =>
         props.reduce(
@@ -47,6 +50,8 @@ export const DemoPreview = ({ path, props = [] }: { path: string; props: DemoPre
             {},
         ),
     );
+
+    if (!Demo) return <p>Demo is not available</p>;
 
     return (
         <div className={cn("relative mt-3 flex gap-3 overflow-hidden rounded border")}>

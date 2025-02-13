@@ -12,7 +12,7 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
-import { copyToClipboard } from "@/website/utils/clipboard";
+import { copyToClipboard } from "@/website/utils/docs";
 import { PackageManager, getCommandAsPackageManager } from "@/website/utils/installation-command";
 
 export const InstallationCommand = ({ command = "" }: { command: string }) => {

@@ -17,6 +17,9 @@ const nextConfig = {
         config.plugins.push(new VeliteWebpackPlugin());
         return config;
     },
+    outputFileTracingIncludes: {
+        "/": ["./components/**/*", "./demo/**/*"],
+    },
 };
 
 export default nextConfig;
