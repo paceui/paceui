@@ -7,7 +7,7 @@ import { ComponentPreviewProp } from "@/website/components/docs/demo-preview";
 
 export const getDemoComponent = (name: string) => {
     return dynamic<ComponentPreviewProp>(() => import(`@/demo/${name.replace(/^demo\//, "")}`).then((e) => e.Demo), {
-        loading: () => <p>Loading</p>,
+        loading: () => <p className="opacity-60">Loading...</p>,
         ssr: false,
     });
 };

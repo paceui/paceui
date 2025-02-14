@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Fira_Code, Work_Sans } from "next/font/google";
@@ -47,6 +48,7 @@ export default function RootLayout({
             <body className={cn("font-sans", sansFont.variable, monoFont.variable)}>
                 <NextThemesProvider attribute="class" defaultTheme="light">
                     <ConfigProvider>{children}</ConfigProvider>
+                    <Analytics />
                 </NextThemesProvider>
             </body>
         </html>
