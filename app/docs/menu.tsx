@@ -123,6 +123,7 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             {
                 title: "Skeleton",
                 link: components + "/skeleton",
+                new: true,
             },
             {
                 title: "Switch",

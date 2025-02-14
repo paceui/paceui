@@ -15,9 +15,10 @@ export type SidebarNavItem = {
     icon?: ReactNode;
     title: string;
     items?: SidebarNavItem[];
-    expanded?: boolean;
-    comingSoon?: boolean;
     link?: string;
+    expanded?: boolean;
+    new?: boolean;
+    comingSoon?: boolean;
 };
 
 type SidebarProps = {
@@ -50,6 +51,8 @@ export const Sidebar = ({ items, className }: SidebarProps) => {
 };
 
 const SidebarNavItem = ({ item, pathname }: { item: SidebarNavItem; pathname: string }) => {
+    const isActive = pathname == item.link;
+
     return item.items ? (
         <AccordionItem
             value={item.title}
@@ -57,9 +60,14 @@ const SidebarNavItem = ({ item, pathname }: { item: SidebarNavItem; pathname: st
                 "opacity-70": item.comingSoon,
             })}>
             <AccordionTrigger className="py-2 pe-2 hover:no-underline [&>svg]:opacity-0 [&>svg]:transition-all group-hover/arrow:[&>svg]:opacity-100">
-                <div className="flex items-center gap-1.5">
+                <div className="flex grow items-center gap-1.5">
                     {item.icon && <Slot className="text-default-600 size-4">{item.icon}</Slot>}
                     {item.title}
+                    {item.new && (
+                        <Badge size="sm" color="success" className="ms-auto">
+                            New
+                        </Badge>
+                    )}
                 </div>
             </AccordionTrigger>
             <AccordionContent
@@ -76,7 +84,7 @@ const SidebarNavItem = ({ item, pathname }: { item: SidebarNavItem; pathname: st
             className={cn(
                 "text-default-700 hover:bg-default-100 mb-0.5 flex items-center gap-2 rounded px-2.5 py-2 text-[15px]/none",
                 {
-                    "!bg-primary/10 !text-primary": pathname == item.link,
+                    "!bg-primary/10 !text-primary": isActive,
                 },
             )}
             href={item.link ?? "#"}>
@@ -85,6 +93,11 @@ const SidebarNavItem = ({ item, pathname }: { item: SidebarNavItem; pathname: st
             {item.comingSoon && (
                 <Badge size="sm" variant="soft" className="ms-auto">
                     Coming soon
+                </Badge>
+            )}
+            {item.new && (
+                <Badge size="sm" color={isActive ? "primary" : "success"} className="ms-auto">
+                    New
                 </Badge>
             )}
         </Link>
