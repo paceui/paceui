@@ -2,13 +2,19 @@
     "name": "paceui",
     "version": "0.0.1",
     "private": true,
+    "license": "MIT",
+    "type": "module",
+    "author": {
+        "name": "Denish Navadiya",
+        "url": "https://x.com/_withden"
+    },
     "scripts": {
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "format:write": "prettier . --write",
-        "format:check": "prettier . --check"
+        "format:check": "prettier . --check",
+        "format:write": "prettier . --write"
     },
     "dependencies": {
         "@radix-ui/react-accordion": "^1.2.3",

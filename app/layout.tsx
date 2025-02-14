@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: { template: "%s | PaceUI", default: "PaceUI" },
     description:
         "Easily integrate, customizable, copy-pasteable Tailwind components and variants into your React and Next.js apps",
-    keywords: ["tailwind", "next.js", "react", "ui components", "web development", "copy-paste components"],
+    keywords: ["tailwind", "next.js", "react", "ui components", "web design", "copy-paste components", "radix ui"],
     openGraph: {
         title: "PaceUI | Tailwind Components for React Ecosystem",
         description: "Integrate customizable Tailwind components into your React and Next.js apps seamlessly.",

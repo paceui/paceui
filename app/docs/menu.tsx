@@ -31,6 +31,10 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
         expanded: false,
         items: [
             {
+                title: "Manual",
+                link: base.installation + "/manual",
+            },
+            {
                 title: "Next.js",
                 link: base.installation + "/next",
                 comingSoon: true,
@@ -39,10 +43,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 title: "Vite",
                 link: base.installation + "/vite",
                 comingSoon: true,
-            },
-            {
-                title: "Manual",
-                link: base.installation + "/manual",
             },
         ],
     },
