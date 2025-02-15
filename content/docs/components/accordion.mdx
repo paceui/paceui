@@ -1,0 +1,146 @@
+---
+slug: components-accordion
+title: Accordion
+description: A vertically stacked set of interactive headings that each reveal an associated section of content.
+links:
+    api: https://www.radix-ui.com/docs/primitives/components/accordion#api-reference
+---
+
+<DemoCodePreview
+    path="demo/docs/accordion/default.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "underline",
+            values: ["underline", "outline", "soft"],
+        },
+    ]}
+/>
+
+## Installation
+
+<Steps>
+    <Step>
+        Install the following dependencies
+    </Step>
+    <InstallationCommand command="npm install @radix-ui/react-accordion" />
+    <Step>
+        Copy and paste the following code into your project
+    </Step>
+    <CodePreview path='components/ui/accordion.tsx' collapsible></CodePreview>
+    <Step>
+        Add following animation css to `app.css` file
+    </Step>
+    <CodePreview lang="css" code={`@theme {
+    --animate-accordion-down: accordion-down 0.2s ease-out;
+    --animate-accordion-up: accordion-up 0.2s ease-out;
+
+    @keyframes accordion-down {
+        from {
+            height: 0;
+        }
+        to {
+            height: var(--radix-accordion-content-height);
+        }
+    }
+
+    @keyframes accordion-up {
+        from {
+            height: var(--radix-accordion-content-height);
+        }
+        to {
+            height: 0;
+        }
+    }
+}`} />
+
+    <Step>
+        Update the import paths to fit your project setup
+    </Step>
+</Steps>
+
+## Examples
+
+### Multiple
+
+If you set `type` to `multiple` then accordion will allow multiple items to expend the same time
+
+<DemoCodePreview
+    path="demo/docs/accordion/multiple.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "underline",
+            values: ["underline", "outline", "soft"],
+        },
+    ]}
+/>
+
+### Disabled
+
+If you use `disabled` prop to `AccordionItem` then that item will disabled
+
+<DemoCodePreview
+    path="demo/docs/accordion/disabled.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "underline",
+            values: ["underline", "outline", "soft"],
+        },
+    ]}
+/>
+
+### Different Arrow
+
+Change `icon` attribute in `AccordionTrigger` to change icon for specific trigger
+
+<DemoCodePreview
+    path="demo/docs/accordion/different-arrow.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "underline",
+            values: ["underline", "outline", "soft"],
+        },
+    ]}
+/>
+
+### Controlled
+
+If you use `value` and `onValueChange` attribute to `Accordion` then it will control item states
+
+<DemoCodePreview
+    path="demo/docs/accordion/controlled.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "underline",
+            values: ["underline", "outline", "soft"],
+        },
+    ]}
+/>
+
+## Props
+
+### Accordion
+
+| Prop    | Type                         | Default   |
+|---------|------------------------------|-----------|
+| variant | `underline` `outline` `soft` | underline |
+
+### AccordionTrigger
+
+| Prop | Type      | Default               |
+|------|-----------|-----------------------|
+| icon | ReactNode | `<ChevronDownIcon />` |

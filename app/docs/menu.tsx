@@ -73,6 +73,11 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
         expanded: true,
         items: [
             {
+                title: "Accordion",
+                link: components + "/accordion",
+                new: true
+            },
+            {
                 title: "Alert",
                 link: components + "/alert",
             },
@@ -136,9 +141,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
         icon: <HourglassIcon />,
         comingSoon: true,
         items: [
-            {
-                title: "Accordion",
-            },
             {
                 title: "Checkbox",
             },
