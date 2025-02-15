@@ -96,7 +96,7 @@ const SidebarNavItem = ({ item, pathname }: { item: SidebarNavItem; pathname: st
                 </Badge>
             )}
             {item.new && (
-                <Badge size="sm" color={isActive ? "primary" : "success"} className="ms-auto">
+                <Badge size="sm" color="primary" className="ms-auto">
                     New
                 </Badge>
             )}
