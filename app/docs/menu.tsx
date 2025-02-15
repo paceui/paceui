@@ -75,7 +75,7 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             {
                 title: "Accordion",
                 link: components + "/accordion",
-                new: true
+                new: true,
             },
             {
                 title: "Alert",
@@ -134,6 +134,11 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 title: "Switch",
                 link: components + "/switch",
             },
+            {
+                title: "Tabs",
+                link: components + "/tabs",
+                new: true,
+            },
         ],
     },
     {
@@ -164,9 +169,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             },
             {
                 title: "Table",
-            },
-            {
-                title: "Tabs",
             },
             {
                 title: "Textarea",
