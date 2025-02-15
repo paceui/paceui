@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Fira_Code, Work_Sans } from "next/font/google";
+import NextTopLoader from "nextjs-toploader";
 import React from "react";
 
 import { cn } from "@/lib/utils";
@@ -46,6 +47,7 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body className={cn("font-sans", sansFont.variable, monoFont.variable)}>
+                <NextTopLoader height={1} showSpinner color="var(--color-primary)" />
                 <NextThemesProvider attribute="class" defaultTheme="light">
                     <ConfigProvider>{children}</ConfigProvider>
                     <Analytics />
