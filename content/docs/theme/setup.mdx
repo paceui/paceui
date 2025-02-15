@@ -4,4 +4,439 @@ title: Theme Setup
 description: Theming with CSS Variables
 ---
 
-<Callout>Coming soon</Callout>
+Here are the steps to set up the PaceUI theme in your existing project:
+
+<Steps>
+    <Step>Add tailwind color config to `@theme` layer, if you haven't added</Step>
+
+    Here's app.css file looks like:
+
+    <CodePreview lang="css" collapsible code={`@theme {
+    /* ...Other variables */
+
+    /* Radius */
+    --radius: 6px;
+    --radius-xs: calc(var(--radius) - 4px);
+    --radius-sm: calc(var(--radius) - 2px);
+    --radius-lg: calc(var(--radius) + 2px);
+    --radius-xl: calc(var(--radius) + 4px);
+
+    /* Layout Colors */
+    --color-background: var(--color-background);
+    --color-foreground: var(--color-foreground);
+    --color-card: var(--color-card);
+    --color-card-foreground: var(--color-card-foreground);
+    --color-popover: var(--color-popover);
+    --color-popover-foreground: var(--color-popover-foreground);
+    --color-border: var(--color-border);
+    --color-ring: var(--color-ring);
+
+    /* Base Colors */
+    --color-default-50: var(--color-default-50);
+    --color-default-100: var(--color-default-100);
+    --color-default-200: var(--color-default-200);
+    --color-default-300: var(--color-default-300);
+    --color-default-400: var(--color-default-400);
+    --color-default-500: var(--color-default-500);
+    --color-default-600: var(--color-default-600);
+    --color-default-700: var(--color-default-700);
+    --color-default-800: var(--color-default-800);
+    --color-default-900: var(--color-default-900);
+    --color-default-950: var(--color-default-950);
+
+    /* Brand Colors */
+    --color-primary: var(--color-primary);
+    --color-primary-foreground: var(--color-primary-foreground);
+    --color-secondary: var(--color-secondary);
+    --color-secondary-foreground: var(--color-secondary-foreground);
+    --color-error: var(--color-error);
+    --color-error-foreground: var(--color-error-foreground);
+
+    /* ...Other variables */
+}`} />
+
+    <Step>Adding color values for those variables</Step>
+
+    Add the following to your `app.css` file to set neutral as the base color and blue as the brand color.
+
+    <CodePreview lang="css" collapsible code={`/* Layout = Neutral */
+&:root {
+    --color-background: hsl(0, 0%, 100%);
+    --color-foreground: hsl(240, 10%, 3.9%);
+    --color-card: hsl(0, 0%, 100%);
+    --color-card-foreground: hsl(240, 10%, 3.9%);
+    --color-popover: hsl(0, 0%, 100%);
+    --color-popover-foreground: hsl(240, 10%, 3.9%);
+    --color-border: hsl(240, 5.9%, 90%);
+    --color-ring: hsl(0, 0%, 64%);
+
+    /* Base = Neutral */
+    --color-default-50: hsl(0, 0%, 98%);
+    --color-default-100: hsl(0, 0%, 96%);
+    --color-default-200: hsl(0, 0%, 90%);
+    --color-default-300: hsl(0, 0%, 83%);
+    --color-default-400: hsl(0, 0%, 64%);
+    --color-default-500: hsl(0, 0%, 45%);
+    --color-default-600: hsl(0, 0%, 32%);
+    --color-default-700: hsl(0, 0%, 25%);
+    --color-default-800: hsl(0, 0%, 15%);
+    --color-default-900: hsl(0, 0%, 9%);
+    --color-default-950: hsl(0, 0%, 4%);
+
+    &.dark {
+        /* Layout = Neutral (Dark) */
+        --color-background: hsl(240, 10%, 3.9%);
+        --color-foreground: hsl(0, 0%, 98%);
+        --color-card: hsl(240, 10%, 3.9%);
+        --color-card-foreground: hsl(0, 0%, 98%);
+        --color-popover: hsl(240, 10%, 3.9%);
+        --color-popover-foreground: hsl(0, 0%, 98%);
+        --color-border: hsl(240, 3.7%, 15.9%);
+
+        /* Base = Neutral (Dark)*/
+        --color-default-50: hsl(0, 0%, 4%);
+        --color-default-100: hsl(0, 0%, 9%);
+        --color-default-200: hsl(0, 0%, 15%);
+        --color-default-300: hsl(0, 0%, 25%);
+        --color-default-400: hsl(0, 0%, 32%);
+        --color-default-500: hsl(0, 0%, 45%);
+        --color-default-600: hsl(0, 0%, 64%);
+        --color-default-700: hsl(0, 0%, 83%);
+        --color-default-800: hsl(0, 0%, 90%);
+        --color-default-900: hsl(0, 0%, 96%);
+        --color-default-950: hsl(0, 0%, 98%);
+    }
+}
+
+/* Brand = Blue */
+&:root{
+    --color-primary: hsl(217, 87%, 57%);
+    --color-primary-foreground: hsl(0, 0%, 98%);
+    --color-secondary: hsl(217, 47%, 48%);
+    --color-secondary-foreground: hsl(0, 0%, 98%);
+    --color-success: hsl(159, 95%, 36%);
+    --color-success-foreground: hsl(0, 0%, 98%);
+    --color-error: hsl(0, 84.2%, 60.2%);
+    --color-error-foreground: hsl(0, 0%, 98%);
+}`} />
+
+    <Step>Change default color</Step>
+
+    Update the following variables to your `app.css` file:
+
+    <Tabs defaultValue="slate" className="mt-3">
+        <TabsList>
+            <TabsTrigger value="slate">Slate</TabsTrigger>
+            <TabsTrigger value="gray">Gray</TabsTrigger>
+            <TabsTrigger value="zinc">Zinc</TabsTrigger>
+            <TabsTrigger value="neutral">Neutral</TabsTrigger>
+        </TabsList>
+        <TabsContent value="slate" className="mt-4">
+            <CodePreview collapsible lang="css" code={`/* Layout = Slate */
+&:root {
+    --color-background: hsl(210, 40%, 99%);
+    --color-foreground: hsl(240, 10%, 3.9%);
+    --color-card: hsl(210, 40%, 99%);
+    --color-card-foreground: hsl(240, 10%, 3.9%);
+    --color-popover: hsl(210, 40%, 99%);
+    --color-popover-foreground: hsl(240, 10%, 3.9%);
+    --color-border: hsl(240, 5.9%, 90%);
+    --color-ring: hsl(215, 20.2%, 65%);
+
+    /* Base = Slate */
+    --color-default-50: hsl(210, 40%, 98%);
+    --color-default-100: hsl(210, 40%, 96%);
+    --color-default-200: hsl(214.3, 31.8%, 91%);
+    --color-default-300: hsl(212.7, 26.8%, 83%);
+    --color-default-400: hsl(215, 20.2%, 65%);
+    --color-default-500: hsl(215.4, 16.3%, 46%);
+    --color-default-600: hsl(215.3, 19.3%, 34%);
+    --color-default-700: hsl(215.3, 25%, 27%);
+    --color-default-800: hsl(217.2, 32.6%, 18%);
+    --color-default-900: hsl(222.2, 47.4%, 11%);
+    --color-default-950: hsl(228.6, 84%, 5%);
+
+
+    &.dark {
+        /* Layout = Slate (Dark) */
+        --color-background: hsl(240, 10%, 10%);
+        --color-foreground: hsl(210, 40%, 98%);
+        --color-card: hsl(240, 10%, 15%);
+        --color-card-foreground: hsl(210, 40%, 95%);
+        --color-popover: hsl(240, 10%, 15%);
+        --color-popover-foreground: hsl(210, 40%, 95%);
+        --color-border: hsl(240, 5.9%, 25%);
+
+        /* Base = Slate (Dark) */
+        --color-default-50: hsl(228.6, 84%, 5%);
+        --color-default-100: hsl(222.2, 47.4%, 11%);
+        --color-default-200: hsl(217.2, 32.6%, 18%);
+        --color-default-300: hsl(215.3, 25%, 27%);
+        --color-default-400: hsl(215.3, 19.3%, 34%);
+        --color-default-500: hsl(215.4, 16.3%, 46%);
+        --color-default-600: hsl(215, 20.2%, 65%);
+        --color-default-700: hsl(212.7, 26.8%, 83%);
+        --color-default-800: hsl(214.3, 31.8%, 91%);
+        --color-default-900: hsl(210, 40%, 96%);
+        --color-default-950: hsl(210, 40%, 98%);
+    }
+}`} />
+        </TabsContent>
+        <TabsContent value="gray" className="mt-4">
+            <CodePreview collapsible lang="css" code={`/* Layout = Gray */
+&:root {
+    --color-background: hsl(0, 0%, 100%);
+    --color-foreground: hsl(240, 10%, 3.9%);
+    --color-card: hsl(0, 0%, 100%);
+    --color-card-foreground: hsl(240, 10%, 3.9%);
+    --color-popover: hsl(0, 0%, 100%);
+    --color-popover-foreground: hsl(240, 10%, 3.9%);
+    --color-border: hsl(240, 5.9%, 90%);
+    --color-ring: hsl(217.9, 10.6%, 65%);
+
+    /* Base = Gray */
+    --color-default-50: hsl(210, 20%, 98%);
+    --color-default-100: hsl(220, 14.3%, 96%);
+    --color-default-200: hsl(220, 13%, 91%);
+    --color-default-300: hsl(216, 12.2%, 84%);
+    --color-default-400: hsl(217.9, 10.6%, 65%);
+    --color-default-500: hsl(220, 8.9%, 46%);
+    --color-default-600: hsl(215, 13.8%, 34%);
+    --color-default-700: hsl(216.9, 19.1%, 27%);
+    --color-default-800: hsl(215, 27.9%, 17%);
+    --color-default-900: hsl(220.9, 39.3%, 11%);
+    --color-default-950: hsl(224, 71.4%, 4%);
+
+    &.dark {
+        /* Layout = Gray (Dark) */
+        --color-background: hsl(240, 10%, 10%);
+        --color-foreground: hsl(0, 0%, 95%);
+        --color-card: hsl(240, 10%, 15%);
+        --color-card-foreground: hsl(0, 0%, 95%);
+        --color-popover: hsl(240, 10%, 15%);
+        --color-popover-foreground: hsl(0, 0%, 95%);
+        --color-border: hsl(240, 5.9%, 25%);
+        --color-ring: hsl(217.9, 10.6%, 65%);
+
+        /* Base = Gray (Dark) */
+        --color-default-50: hsl(224, 71.4%, 4%);
+        --color-default-100: hsl(220.9, 39.3%, 11%);
+        --color-default-200: hsl(215, 27.9%, 17%);
+        --color-default-300: hsl(216.9, 19.1%, 27%);
+        --color-default-400: hsl(215, 13.8%, 34%);
+        --color-default-500: hsl(220, 8.9%, 46%);
+        --color-default-600: hsl(217.9, 10.6%, 65%);
+        --color-default-700: hsl(216, 12.2%, 84%);
+        --color-default-800: hsl(220, 13%, 91%);
+        --color-default-900: hsl(220, 14.3%, 96%);
+        --color-default-950: hsl(210, 20%, 98%);
+    }
+}`} />
+        </TabsContent>
+        <TabsContent value="zinc" className="mt-4">
+            <CodePreview collapsible lang="css" code={`/* Layout = Zinc */
+&:root {
+    --color-background: hsl(0, 0%, 100%);
+    --color-foreground: hsl(240, 10%, 3.9%);
+    --color-card: hsl(0, 0%, 100%);
+    --color-card-foreground: hsl(240, 10%, 3.9%);
+    --color-popover: hsl(0, 0%, 100%);
+    --color-popover-foreground: hsl(240, 10%, 3.9%);
+    --color-border: hsl(240, 5.9%, 90%);
+    --color-ring: hsl(240, 5%, 65%);
+
+    /* Base = Zinc */
+    --color-default-50: hsl(0, 0%, 98%);
+    --color-default-100: hsl(240, 4.8%, 96%);
+    --color-default-200: hsl(240, 5.9%, 90%);
+    --color-default-300: hsl(240, 4.9%, 84%);
+    --color-default-400: hsl(240, 5%, 65%);
+    --color-default-500: hsl(240, 3.8%, 46%);
+    --color-default-600: hsl(240, 5.2%, 34%);
+    --color-default-700: hsl(240, 5.3%, 26%);
+    --color-default-800: hsl(240, 3.7%, 16%);
+    --color-default-900: hsl(240, 5.9%, 10%);
+    --color-default-950: hsl(240, 10%, 4%);
+
+    &.dark {
+        /* Layout = Zinc (Dark) */
+        --color-background: hsl(240, 10%, 5%);
+        --color-foreground: hsl(0, 0%, 95%);
+        --color-card: hsl(240, 10%, 10%);
+        --color-card-foreground: hsl(0, 0%, 95%);
+        --color-popover: hsl(240, 10%, 5%);
+        --color-popover-foreground: hsl(0, 0%, 95%);
+        --color-border: hsl(240, 5.9%, 25%);
+        --color-ring: hsl(240, 5%, 50%);
+
+        /* Base = Zinc (Dark) */
+        --color-default-50: hsl(240, 10%, 4%);
+        --color-default-100: hsl(240, 5.9%, 10%);
+        --color-default-200: hsl(240, 3.7%, 16%);
+        --color-default-300: hsl(240, 5.3%, 26%);
+        --color-default-400: hsl(240, 5.2%, 34%);
+        --color-default-500: hsl(240, 3.8%, 46%);
+        --color-default-600: hsl(240, 5%, 65%);
+        --color-default-700: hsl(240, 4.9%, 84%);
+        --color-default-800: hsl(240, 5.9%, 90%);
+        --color-default-900: hsl(240, 4.8%, 96%);
+        --color-default-950: hsl(0, 0%, 98%);
+    }
+}`} />
+        </TabsContent>
+        <TabsContent value="neutral" className="mt-4">
+            <CodePreview collapsible lang="css" code={`/* Layout = Neutral */
+&:root {
+    --color-background: hsl(0, 0%, 100%);
+    --color-foreground: hsl(240, 10%, 3.9%);
+    --color-card: hsl(0, 0%, 100%);
+    --color-card-foreground: hsl(240, 10%, 3.9%);
+    --color-popover: hsl(0, 0%, 100%);
+    --color-popover-foreground: hsl(240, 10%, 3.9%);
+    --color-border: hsl(240, 5.9%, 90%);
+    --color-ring: hsl(0, 0%, 64%);
+
+    /* Base = Neutral */
+    --color-default-50: hsl(0, 0%, 98%);
+    --color-default-100: hsl(0, 0%, 96%);
+    --color-default-200: hsl(0, 0%, 90%);
+    --color-default-300: hsl(0, 0%, 83%);
+    --color-default-400: hsl(0, 0%, 64%);
+    --color-default-500: hsl(0, 0%, 45%);
+    --color-default-600: hsl(0, 0%, 32%);
+    --color-default-700: hsl(0, 0%, 25%);
+    --color-default-800: hsl(0, 0%, 15%);
+    --color-default-900: hsl(0, 0%, 9%);
+    --color-default-950: hsl(0, 0%, 4%);
+
+    /* Brand = Blue */
+    --color-primary: hsl(217, 87%, 57%);
+    --color-primary-foreground: hsl(0, 0%, 98%);
+    --color-secondary: hsl(217, 47%, 48%);
+    --color-secondary-foreground: hsl(0, 0%, 98%);
+    --color-success: hsl(159, 95%, 36%);
+    --color-success-foreground: hsl(0, 0%, 98%);
+    --color-error: hsl(0, 84.2%, 60.2%);
+    --color-error-foreground: hsl(0, 0%, 98%);
+
+    &.dark {
+        /* Layout = Neutral (Dark) */
+        --color-background: hsl(240, 10%, 3.9%);
+        --color-foreground: hsl(0, 0%, 98%);
+        --color-card: hsl(240, 10%, 3.9%);
+        --color-card-foreground: hsl(0, 0%, 98%);
+        --color-popover: hsl(240, 10%, 3.9%);
+        --color-popover-foreground: hsl(0, 0%, 98%);
+        --color-border: hsl(240, 3.7%, 15.9%);
+
+        /* Base = Neutral (Dark) */
+        --color-default-50: hsl(0, 0%, 4%);
+        --color-default-100: hsl(0, 0%, 9%);
+        --color-default-200: hsl(0, 0%, 15%);
+        --color-default-300: hsl(0, 0%, 25%);
+        --color-default-400: hsl(0, 0%, 32%);
+        --color-default-500: hsl(0, 0%, 45%);
+        --color-default-600: hsl(0, 0%, 64%);
+        --color-default-700: hsl(0, 0%, 83%);
+        --color-default-800: hsl(0, 0%, 90%);
+        --color-default-900: hsl(0, 0%, 96%);
+        --color-default-950: hsl(0, 0%, 98%);
+    }
+}`} />
+        </TabsContent>
+    </Tabs>
+
+
+    <Step>Change primary color</Step>
+
+    Update the following variables to your `styles/globals.css` file:
+
+    <Tabs defaultValue="purple" className="mt-3">
+        <TabsList>
+            <TabsTrigger value="purple">Purple</TabsTrigger>
+            <TabsTrigger value="green">Green</TabsTrigger>
+            <TabsTrigger value="teal">Teal</TabsTrigger>
+            <TabsTrigger value="orange">Orange</TabsTrigger>
+            <TabsTrigger value="rose">Rose</TabsTrigger>
+            <TabsTrigger value="blue">Blue</TabsTrigger>
+        </TabsList>
+        <TabsContent value="purple" className="mt-4">
+            <CodePreview collapsible lang="css" code={`/* Brand = Purple */
+&:root {
+    --color-primary: hsl(260, 70%, 60%);
+    --color-primary-foreground: hsl(0, 0%, 98%);
+    --color-secondary: hsl(260, 34%, 49%);
+    --color-secondary-foreground: hsl(0, 0%, 98%);
+    --color-success: hsl(159, 95%, 36%);
+    --color-success-foreground: hsl(0, 0%, 98%);
+    --color-error: hsl(0, 84.2%, 60.2%);
+    --color-error-foreground: hsl(0, 0%, 98%);
+}`} />
+        </TabsContent>
+        <TabsContent value="green" className="mt-4">
+            <CodePreview collapsible lang="css" code={`/* Brand = Green */
+&:root {
+    --color-primary: hsl(160, 84%, 36%);
+    --color-primary-foreground: hsl(0, 0%, 98%);
+    --color-secondary: hsl(160, 53%, 32%);
+    --color-secondary-foreground: hsl(0, 0%, 98%);
+    --color-success: hsl(159, 95%, 36%);
+    --color-success-foreground: hsl(0, 0%, 98%);
+    --color-error: hsl(0, 84.2%, 60.2%);
+    --color-error-foreground: hsl(0, 0%, 98%);
+}`} />
+        </TabsContent>
+        <TabsContent value="teal" className="mt-4">
+            <CodePreview collapsible lang="css" code={`/* Brand = Teal */
+&:root {
+    --color-primary: hsl(178, 84%, 36%);
+    --color-primary-foreground: hsl(0, 0%, 98%);
+    --color-secondary: hsl(178, 52%, 33%);
+    --color-secondary-foreground: hsl(0, 0%, 98%);
+    --color-success: hsl(159, 95%, 36%);
+    --color-success-foreground: hsl(0, 0%, 98%);
+    --color-error: hsl(0, 84.2%, 60.2%);
+    --color-error-foreground: hsl(0, 0%, 98%);
+}`} />
+        </TabsContent>
+        <TabsContent value="orange" className="mt-4">
+            <CodePreview collapsible lang="css" code={`/* Brand = Orange */
+&:root {
+    --color-primary: hsl(30, 100%, 50%);
+    --color-primary-foreground: hsl(0, 0%, 98%);
+    --color-secondary: hsl(29, 81%, 52%);
+    --color-secondary-foreground: hsl(0, 0%, 98%);
+    --color-success: hsl(159, 95%, 36%);
+    --color-success-foreground: hsl(0, 0%, 98%);
+    --color-error: hsl(0, 84.2%, 60.2%);
+    --color-error-foreground: hsl(0, 0%, 98%);
+}`} />
+        </TabsContent>
+        <TabsContent value="rose" className="mt-4">
+            <CodePreview collapsible lang="css" code={`/* Brand = Rose */
+&:root {
+    --color-primary: hsl(340, 89%, 63%);
+    --color-primary-foreground: hsl(0, 0%, 98%);
+    --color-secondary: hsl(340, 60%, 50%);
+    --color-secondary-foreground: hsl(0, 0%, 98%);
+    --color-success: hsl(159, 95%, 36%);
+    --color-success-foreground: hsl(0, 0%, 98%);
+    --color-error: hsl(0, 84.2%, 60.2%);
+    --color-error-foreground: hsl(0, 0%, 98%);
+}`} />
+        </TabsContent>
+        <TabsContent value="blue" className="mt-4">
+            <CodePreview collapsible lang="css" code={`/* Brand = Blue */
+&:root{
+    --color-primary: hsl(217, 87%, 57%);
+    --color-primary-foreground: hsl(0, 0%, 98%);
+    --color-secondary: hsl(217, 47%, 48%);
+    --color-secondary-foreground: hsl(0, 0%, 98%);
+    --color-success: hsl(159, 95%, 36%);
+    --color-success-foreground: hsl(0, 0%, 98%);
+    --color-error: hsl(0, 84.2%, 60.2%);
+    --color-error-foreground: hsl(0, 0%, 98%);
+}`} />
+        </TabsContent>
+    </Tabs>
+</Steps>

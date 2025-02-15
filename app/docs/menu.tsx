@@ -58,7 +58,7 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             {
                 title: "Setup",
                 link: base.theme + "/setup",
-                comingSoon: true,
+                new: true,
             },
             {
                 title: "Dark mode",

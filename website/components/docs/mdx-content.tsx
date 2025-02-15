@@ -3,6 +3,7 @@ import React from "react";
 
 import * as runtime from "react/jsx-runtime";
 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 
 import { Callout } from "./callout";
@@ -87,6 +88,10 @@ const sharedComponents = {
     Callout,
     CodePreview,
     InstallationCommand,
+    Tabs,
+    TabsList,
+    TabsTrigger,
+    TabsContent,
 };
 
 const useMDXComponent = (code: string) => {

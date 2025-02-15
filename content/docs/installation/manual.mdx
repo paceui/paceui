@@ -68,10 +68,10 @@ description: Manually add the dependencies to your project.
 
     <Step>Adding color values for those variables</Step>
 
-    Add the following to your app.css file.
+    Add the following to your `app.css` file to set neutral as the base color and blue as the brand color.
 
-    <CodePreview lang="css" code={`&:root {
-    /* Layout = Neutral */
+    <CodePreview lang="css" collapsible code={`/* Layout = Neutral */
+&:root {
     --color-background: hsl(0, 0%, 100%);
     --color-foreground: hsl(240, 10%, 3.9%);
     --color-card: hsl(0, 0%, 100%);
@@ -93,14 +93,6 @@ description: Manually add the dependencies to your project.
     --color-default-800: hsl(0, 0%, 15%);
     --color-default-900: hsl(0, 0%, 9%);
     --color-default-950: hsl(0, 0%, 4%);
-
-    /* Brand = Blue */
-    --color-primary: hsl(217, 87%, 57%);
-    --color-primary-foreground: hsl(0, 0%, 98%);
-    --color-secondary: hsl(217, 47%, 48%);
-    --color-secondary-foreground: hsl(0, 0%, 98%);
-    --color-error: hsl(0, 84.2%, 60.2%);
-    --color-error-foreground: hsl(0, 0%, 98%);
 
     &.dark {
         /* Layout = Neutral (Dark) */
@@ -125,7 +117,22 @@ description: Manually add the dependencies to your project.
         --color-default-900: hsl(0, 0%, 96%);
         --color-default-950: hsl(0, 0%, 98%);
     }
+}
+
+/* Brand = Blue */
+&:root{
+    --color-primary: hsl(217, 87%, 57%);
+    --color-primary-foreground: hsl(0, 0%, 98%);
+    --color-secondary: hsl(217, 47%, 48%);
+    --color-secondary-foreground: hsl(0, 0%, 98%);
+    --color-success: hsl(159, 95%, 36%);
+    --color-success-foreground: hsl(0, 0%, 98%);
+    --color-error: hsl(0, 84.2%, 60.2%);
+    --color-error-foreground: hsl(0, 0%, 98%);
 }`} />
+
+
+    You can further customize the theme by following the [theme setup](/docs/theme/setup) instructions.
 
     <Step>Edit tsconfig.json file (If your project in typescript)</Step>
 
