@@ -102,6 +102,11 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: components + "/card",
             },
             {
+                title: "Dialog",
+                link: components + "/dialog",
+                new: true,
+            },
+            {
                 title: "Dropdown Menu",
                 link: components + "/dropdown-menu",
             },
@@ -148,9 +153,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
         items: [
             {
                 title: "Checkbox",
-            },
-            {
-                title: "Dialog",
             },
             {
                 title: "Pagination",

@@ -1,0 +1,96 @@
+---
+slug: components-dialog
+title: Dialog
+description: To displays a modal window for user interaction or feedback
+links:
+    api: https://www.radix-ui.com/docs/primitives/components/dialog#api-reference
+---
+
+<DemoCodePreview
+    path="demo/docs/dialog/default.tsx"
+    props={[
+        {
+            title: "Position",
+            name: "position",
+            type: "select",
+            defaultValue: "center",
+            values: ["top-left", "top-center", "top-right", "center", "bottom-left", "bottom-center", "bottom-right"],
+        },
+        {
+            title: "Backdrop",
+            name: "backdrop",
+            type: "select",
+            defaultValue: "opaque",
+            values: ["opaque", "blur", "transparent"],
+        },
+    ]}
+/>
+
+## Installation
+
+<Steps>
+    <Step>
+        Install the following dependencies
+    </Step>
+    <InstallationCommand command="npm install @radix-ui/react-dialog"/>
+    <Step>
+        Copy and paste the following code into your project
+    </Step>
+    <CodePreview path='components/ui/dialog.tsx' collapsible></CodePreview>
+    <Step>
+        Update the import paths to fit your project setup
+    </Step>
+</Steps>
+
+## Examples
+
+### Close Button
+
+<DemoCodePreview
+    path="demo/docs/dialog/close-button.tsx"
+    props={[
+        {
+            title: "Position",
+            name: "position",
+            type: "select",
+            defaultValue: "center",
+            values: ["top-left", "top-center", "top-right", "center", "bottom-left", "bottom-center", "bottom-right"],
+        },
+        {
+            title: "Backdrop",
+            name: "backdrop",
+            type: "select",
+            defaultValue: "opaque",
+            values: ["opaque", "blur", "transparent"],
+        },
+    ]}
+/>
+
+### Controlled
+
+<DemoCodePreview
+    path="demo/docs/dialog/controlled.tsx"
+    props={[
+        {
+            title: "Position",
+            name: "position",
+            type: "select",
+            defaultValue: "center",
+            values: ["top-left", "top-center", "top-right", "center", "bottom-left", "bottom-center", "bottom-right"],
+        },
+        {
+            title: "Backdrop",
+            name: "backdrop",
+            type: "select",
+            defaultValue: "opaque",
+            values: ["opaque", "blur", "transparent"],
+        },
+    ]}
+/>
+
+## Props
+
+| Prop     | Type                                                                                                            | Default |
+|----------|-----------------------------------------------------------------------------------------------------------------|---------|
+| position | `top-left` `top-center` `top-right` `center`<div className="mt-1"/>`bottom-left` `bottom-center` `bottom-right` | center  |
+| backdrop | `opaque` `blur` `transparent`                                                                                   | opaque  |
