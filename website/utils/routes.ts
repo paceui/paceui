@@ -11,5 +11,7 @@ export const routes = {
     },
     externalLinks: {
         github: "https://github.com/paceui/paceui",
+        discord: "https://discord.gg/RS2fj5CqAM",
+        twitter: "https://x.com/paceui_dev",
     },
 };
