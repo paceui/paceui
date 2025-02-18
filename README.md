@@ -1,3 +1,5 @@
+![hero](/public/images/banner.png)
+
 # PaceUI
 
 A collection of ready-to-use component variants that you can easily copy, paste, and customize for React and Next.js apps.
