@@ -102,6 +102,11 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: components + "/card",
             },
             {
+                title: "Checkbox",
+                link: components + "/checkbox",
+                new: true,
+            },
+            {
                 title: "Dialog",
                 link: components + "/dialog",
                 new: true,
@@ -151,9 +156,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
         icon: <HourglassIcon />,
         comingSoon: true,
         items: [
-            {
-                title: "Checkbox",
-            },
             {
                 title: "Pagination",
             },

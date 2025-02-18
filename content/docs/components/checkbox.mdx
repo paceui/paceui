@@ -1,0 +1,212 @@
+---
+slug: components-checkbox
+title: Checkbox
+description: UI element that enables users to select multiple options from a list
+links:
+    api: https://www.radix-ui.com/docs/primitives/components/checkbox#api-reference
+---
+
+<DemoCodePreview
+    path="demo/docs/checkbox/default.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Installation
+
+<Steps>
+    <Step>
+        Install the following dependencies
+    </Step>
+    <InstallationCommand command="npm install @radix-ui/react-checkbox @radix-ui/react-slot" />
+    <Step>
+        Copy and paste the following code into your project
+    </Step>
+    <CodePreview path='components/ui/checkbox.tsx' collapsible></CodePreview>
+    <Step>
+        Update the import paths to fit your project setup
+    </Step>
+</Steps>
+
+## Examples
+
+### Disabled
+
+If you pass `disabled` prop then it will disable the checkbox
+
+<DemoCodePreview
+    path="demo/docs/checkbox/disabled.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "lg",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### Icon
+
+If you pass `ReactNode` to `icon` prop then it will render custom check icon
+
+<DemoCodePreview
+    path="demo/docs/checkbox/icon.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "lg",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### With Helper
+
+<DemoCodePreview
+    path="demo/docs/checkbox/with-helper.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### Animation Duration
+
+Use `duration-300`, `duration-500`, or `duration-*` class to adjust the animation duration for the checkbox
+
+<DemoCodePreview
+    path="demo/docs/checkbox/animation-duration.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### Controlled
+
+<DemoCodePreview
+    path="demo/docs/checkbox/controlled.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Props
+
+| Prop    | Type                                    | Default        |
+| ------- | --------------------------------------- | -------------- |
+| variant | `soft` `outline`                        | outline        |
+| size    | `sm` `md` `lg `                         | md             |
+| color   | `default` `primary` `secondary` `error` | default        |
+| icon    | ReactNode                               | `<CheckIcon/>` |

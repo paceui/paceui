@@ -12,6 +12,7 @@
 
 # ignore other lockfiles
 yarn.lock
+package-lock.json
 
 # testing
 /coverage
