@@ -19,6 +19,7 @@ const checkboxTheme = tv({
             default: "",
             primary: "",
             secondary: "",
+            success: "",
             error: "",
         },
         variant: {
@@ -59,6 +60,11 @@ const checkboxTheme = tv({
         },
         {
             variant: "outline",
+            color: "success",
+            className: "border-success data-[state=checked]:bg-success data-[state=checked]:text-success-foreground",
+        },
+        {
+            variant: "outline",
             color: "error",
             className: "border-error data-[state=checked]:bg-error data-[state=checked]:text-error-foreground",
         },
@@ -76,6 +82,11 @@ const checkboxTheme = tv({
             variant: "soft",
             color: "secondary",
             className: "bg-secondary/15 data-[state=checked]:text-secondary",
+        },
+        {
+            variant: "soft",
+            color: "success",
+            className: "bg-success/15 data-[state=checked]:text-success",
         },
         {
             variant: "soft",
