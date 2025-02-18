@@ -19,6 +19,18 @@ export const metadata: Metadata = {
     description:
         "Easily integrate, customizable, copy-pasteable Tailwind components and variants into your React and Next.js apps",
     keywords: ["tailwind", "next.js", "react", "ui components", "web design", "copy-paste components", "radix ui"],
+    icons: {
+        icon: [
+            {
+                url: "/images/favicon-light.png",
+                media: "(prefers-color-scheme: light)",
+            },
+            {
+                url: "/images/favicon-dark.png",
+                media: "(prefers-color-scheme: dark)",
+            },
+        ],
+    },
     openGraph: {
         title: "PaceUI | Tailwind Components for React Ecosystem",
         description: "Integrate customizable Tailwind components into your React and Next.js apps seamlessly.",

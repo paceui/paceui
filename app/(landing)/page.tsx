@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/website/components/Logo";
 import { Topbar } from "@/website/components/layouts/topbar";
 import { Newsletter } from "@/website/components/newsletter";
 import { routes } from "@/website/utils/routes";
@@ -19,7 +20,10 @@ export default function LandingPage() {
                                 Preview
                             </Badge>
 
-                            <p className="text-3xl font-semibold sm:text-7xl">PaceUI</p>
+                            <div className="flex items-center justify-center gap-4">
+                                <Logo className="size-16" />
+                                <p className="text-3xl font-semibold sm:text-7xl">PaceUI</p>
+                            </div>
                         </div>
                         <p className="text-default-800 sm:text-xl">
                             Easily integrate, customizable, copy-pasteable Tailwind components and variants into your
