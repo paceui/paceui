@@ -124,6 +124,11 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: components + "/label",
             },
             {
+                title: "Pagination",
+                link: components + "/pagination",
+                new: true,
+            },
+            {
                 title: "Popover",
                 link: components + "/popover",
             },
@@ -156,9 +161,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
         icon: <HourglassIcon />,
         comingSoon: true,
         items: [
-            {
-                title: "Pagination",
-            },
             {
                 title: "Progress",
             },

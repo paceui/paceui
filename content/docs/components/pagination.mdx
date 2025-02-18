@@ -1,0 +1,85 @@
+---
+slug: components-pagination
+title: Pagination
+description: To allow users to navigate through multiple content pages
+---
+
+<DemoCodePreview
+    path="demo/docs/pagination/default.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "activeVariant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "solid", "soft"],
+        },
+        {
+            title: "Color",
+            name: "activeColor",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Installation
+
+<Steps>
+    <Step>
+        Copy and paste the following code into your project
+    </Step>
+    <CodePreview path='components/ui/pagination.tsx' collapsible></CodePreview>
+    <Step>
+        Update the import paths to fit your project setup
+    </Step>
+</Steps>
+
+## Examples
+
+### Controlled
+
+Use `useState` to manage and update the active page in pagination
+
+<DemoCodePreview
+    path="demo/docs/pagination/controlled.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "activeVariant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "solid", "soft"],
+        },
+        {
+            title: "Color",
+            name: "activeColor",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Props
+
+| Prop          | Type                                              | Default |
+|---------------|---------------------------------------------------|---------|
+| activeVariant | `outline` `solid` `soft`                          | outline |
+| activeColor   | `default` `primary` `secondary` `success` `error` | default |
+| size          | `sm` `md` `lg`                                    | md      |
