@@ -1,0 +1,17 @@
+{
+    "name": "primary-purple",
+    "type": "registry:style",
+    "cssVars": {
+        "light": {
+            "primary": "260, 70%, 60%",
+            "primary-foreground": "0, 0%, 100%",
+            "secondary": "260, 34%, 49%",
+            "secondary-foreground": "0, 0%, 100%",
+            "success": "159, 95%, 36%",
+            "success-foreground": "0, 0%, 100%",
+            "error": "0, 84.2%, 60.2%",
+            "error-foreground": "0, 0%, 100%"
+        }
+    },
+    "files": []
+}

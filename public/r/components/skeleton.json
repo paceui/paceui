@@ -1,0 +1,11 @@
+{
+    "name": "skeleton",
+    "type": "registry:ui",
+    "files": [
+        {
+            "path": "ui/skeleton.tsx",
+            "type": "registry:ui",
+            "content": "import * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nexport type SkeletonProps = React.ComponentProps<\"div\">;\n\nexport const Skeleton = ({ className, ...props }: SkeletonProps) => (\n    <div className={cn(\"bg-default-200 animate-pulse rounded\", className)} {...props} />\n);\n"
+        }
+    ]
+}

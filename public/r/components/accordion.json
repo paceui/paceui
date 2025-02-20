@@ -1,0 +1,34 @@
+{
+    "name": "accordion",
+    "type": "registry:ui",
+    "dependencies": ["@radix-ui/react-accordion"],
+    "files": [
+        {
+            "path": "ui/accordion.tsx",
+            "type": "registry:ui",
+            "content": "\"use client\";\n\nimport * as AccordionPrimitive from \"@radix-ui/react-accordion\";\nimport * as React from \"react\";\nimport { Slot } from \"@radix-ui/react-slot\";\nimport { ChevronDownIcon } from \"lucide-react\";\nimport { ReactNode } from \"react\";\nimport { VariantProps, tv } from \"tailwind-variants\";\n\nimport { cn } from \"@/lib/utils\";\n\nconst accordionTheme = tv({\n    slots: {\n        base: \"\",\n        item: \"[&[data-disabled]]:opacity-60\",\n        trigger:\n            \"group flex w-full cursor-pointer items-center justify-between py-2.5 text-sm font-medium transition-all disabled:pointer-events-none\",\n        triggerIcon:\n            \"text-default-600 group-data-[state=open]:text-default-800 size-4 shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-180\",\n        content:\n            \"data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down mt-1 overflow-hidden text-sm\",\n    },\n    variants: {\n        variant: {\n            underline: {\n                item: \"border-b last-of-type:border-0\",\n                trigger: \"hover:underline\",\n            },\n            outline: {\n                base: \"space-y-2\",\n                item: \"rounded border\",\n                trigger: \"hover:bg-default-100 rounded px-4\",\n                content: \"px-4\",\n            },\n            soft: {\n                base: \"space-y-2\",\n                item: \"bg-default-100 rounded\",\n                trigger: \"hover:bg-default-200 rounded px-4\",\n                content: \"px-4\",\n            },\n        },\n    },\n    defaultVariants: {\n        variant: \"underline\",\n    },\n});\n\ntype ThemeProps = VariantProps<typeof accordionTheme>;\n\nconst AccordionContext = React.createContext<ThemeProps>(accordionTheme.defaultVariants);\n\nexport type AccordionProps = React.ComponentProps<typeof AccordionPrimitive.Root> & ThemeProps;\n\nexport const Accordion = ({ variant, className, ...props }: AccordionProps) => {\n    return (\n        <AccordionContext.Provider value={{ variant }}>\n            <AccordionPrimitive.Root className={accordionTheme().base({ variant, className })} {...props} />\n        </AccordionContext.Provider>\n    );\n};\n\nexport type AccordionItemProps = React.ComponentProps<typeof AccordionPrimitive.Item>;\n\nexport const AccordionItem = ({ className, ...props }: AccordionItemProps) => {\n    const { variant } = React.use(AccordionContext);\n    return <AccordionPrimitive.Item className={cn(accordionTheme().item({ variant }), className)} {...props} />;\n};\n\nexport type AccordionTriggerProps = React.ComponentProps<typeof AccordionPrimitive.Trigger> & { icon?: ReactNode };\n\nexport const AccordionTrigger = ({ className, icon, children, ...props }: AccordionTriggerProps) => {\n    const { variant } = React.use(AccordionContext);\n\n    const Icon = icon || <ChevronDownIcon />;\n\n    return (\n        <AccordionPrimitive.Header>\n            <AccordionPrimitive.Trigger className={cn(accordionTheme({ variant }).trigger(), className)} {...props}>\n                {children}\n                <Slot className={accordionTheme().triggerIcon()}>{Icon}</Slot>\n            </AccordionPrimitive.Trigger>\n        </AccordionPrimitive.Header>\n    );\n};\n\nexport type AccordionContentProps = React.ComponentProps<typeof AccordionPrimitive.Content>;\n\nexport const AccordionContent = ({ className, children, ...props }: AccordionContentProps) => {\n    const { variant } = React.use(AccordionContext);\n\n    return (\n        <AccordionPrimitive.Content className={accordionTheme({ variant }).content()} {...props}>\n            <div className={cn(\"pt-0 pb-4\", className)}>{children}</div>\n        </AccordionPrimitive.Content>\n    );\n};\n"
+        }
+    ],
+    "tailwind": {
+        "config": {
+            "theme": {
+                "extend": {
+                    "keyframes": {
+                        "accordion-down": {
+                            "from": { "height": "0" },
+                            "to": { "height": "var(--radix-accordion-content-height)" }
+                        },
+                        "accordion-up": {
+                            "from": { "height": "var(--radix-accordion-content-height)" },
+                            "to": { "height": "0" }
+                        }
+                    },
+                    "animation": {
+                        "accordion-down": "accordion-down 0.2s ease-out",
+                        "accordion-up": "accordion-up 0.2s ease-out"
+                    }
+                }
+            }
+        }
+    }
+}

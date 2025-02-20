@@ -20,6 +20,15 @@ const nextConfig = {
     outputFileTracingIncludes: {
         "/": ["./components/**/*", "./demo/**/*"],
     },
+    async redirects() {
+        return [
+            {
+                source: "/r/:path([^.]*)",
+                destination: "/r/:path.json",
+                permanent: true,
+            },
+        ];
+    },
 };
 
 export default nextConfig;

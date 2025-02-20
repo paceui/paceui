@@ -1,0 +1,11 @@
+{
+    "name": "card",
+    "type": "registry:ui",
+    "files": [
+        {
+            "path": "ui/card.tsx",
+            "type": "registry:ui",
+            "content": "import * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nexport type CardProps = React.ComponentProps<\"div\">;\n\nexport const Card = ({ className, ...props }: CardProps) => (\n    <div className={cn(\"bg-card text-card-foreground rounded-lg border shadow-sm\", className)} {...props} />\n);\n\nexport type CardHeaderProps = React.ComponentProps<\"div\">;\n\nexport const CardHeader = ({ className, ...props }: CardHeaderProps) => (\n    <div className={cn(\"p-4\", className)} {...props} />\n);\n\nexport type CardTitleProps = React.ComponentProps<\"h3\">;\n\nexport const CardTitle = ({ className, ...props }: CardTitleProps) => (\n    <h3 className={cn(\"text-lg leading-none font-medium tracking-tight lg:text-xl/none\", className)} {...props} />\n);\n\nexport type CardDescriptionProps = React.ComponentProps<\"p\">;\n\nexport const CardDescription = ({ className, ...props }: CardDescriptionProps) => (\n    <p className={cn(\"text-default-600 text-sm\", className)} {...props} />\n);\n\nexport type CardContentProps = React.ComponentProps<\"div\">;\n\nexport const CardContent = ({ className, ...props }: CardContentProps) => (\n    <div className={cn(\"p-4 pt-0\", className)} {...props} />\n);\n\nexport type CardFooterProps = React.ComponentProps<\"div\">;\n\nexport const CardFooter = ({ className, ...props }: CardFooterProps) => (\n    <div className={cn(\"flex items-center gap-3 p-4 pt-0\", className)} {...props} />\n);\n"
+        }
+    ]
+}

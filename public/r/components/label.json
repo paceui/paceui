@@ -1,0 +1,11 @@
+{
+    "name": "label",
+    "type": "registry:ui",
+    "files": [
+        {
+            "path": "ui/label.tsx",
+            "type": "registry:ui",
+            "content": "import * as LabelPrimitive from \"@radix-ui/react-label\";\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nexport type LabelProps = React.ComponentProps<typeof LabelPrimitive.Root>;\n\nexport const Label = ({ className, ...props }: LabelProps) => (\n    <LabelPrimitive.Root\n        className={cn(\n            \"cursor-pointer text-sm leading-none peer-has-[:disabled]:cursor-not-allowed peer-has-[:disabled]:opacity-60\",\n            className,\n        )}\n        {...props}\n    />\n);\n"
+        }
+    ]
+}

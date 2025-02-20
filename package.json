@@ -11,6 +11,7 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
+        "build:registry": "tsx website/registry/script.ts && prettier --log-level silent --write public/r --cache",
         "start": "next start",
         "lint": "next lint",
         "format:check": "prettier . --check",
@@ -58,7 +59,9 @@
         "prettier-plugin-tailwindcss": "^0.6.11",
         "rehype-autolink-headings": "^7.1.0",
         "rehype-slug": "^6.0.0",
+        "shadcn": "^2.3.0",
         "tailwindcss": "^4.0.4",
+        "tsx": "^4.19.3",
         "typescript": "^5.7.3",
         "velite": "^0.2.2"
     }

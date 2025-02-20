@@ -1,0 +1,17 @@
+{
+    "name": "primary-teal",
+    "type": "registry:style",
+    "cssVars": {
+        "light": {
+            "primary": "178, 84%, 36%",
+            "primary-foreground": "0, 0%, 100%",
+            "secondary": "178, 52%, 33%",
+            "secondary-foreground": "0, 0%, 100%",
+            "success": "159, 95%, 36%",
+            "success-foreground": "0, 0%, 100%",
+            "error": "0, 84.2%, 60.2%",
+            "error-foreground": "0, 0%, 100%"
+        }
+    },
+    "files": []
+}
