@@ -5,7 +5,12 @@ import { useEffect, useMemo, useState } from "react";
 import { codeToHtml } from "shiki";
 
 import { Button } from "@/components/ui/button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { copyToClipboard } from "@/website/utils/docs";
 import { PackageManager, getCommandAsPackageManager } from "@/website/utils/installation-command";
@@ -13,7 +18,6 @@ import { PackageManager, getCommandAsPackageManager } from "@/website/utils/inst
 export const InstallationCommand = ({ command: rawCommand = "" }: { command: string }) => {
     const [code, setCode] = useState<string>("");
     const [hasCopied, setHasCopied] = useState(false);
-
 
     const command = useMemo(() => {
         return rawCommand.replace("~website/", "https://paceui.com/");

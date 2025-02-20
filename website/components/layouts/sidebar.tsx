@@ -3,7 +3,7 @@
 import { Slot } from "@radix-ui/react-slot";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {ReactNode, useEffect, useState} from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { ClassNameValue } from "tailwind-merge";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -35,8 +35,8 @@ export const Sidebar = ({ items, className }: SidebarProps) => {
                 }
                 return item.expanded;
             })
-            .map((s) => s.title)
-    }
+            .map((s) => s.title);
+    };
 
     const pathname = usePathname();
     const [menuKeys, setMenuKeys] = useState<string[]>(getOpenMenuKeys());
@@ -47,7 +47,11 @@ export const Sidebar = ({ items, className }: SidebarProps) => {
 
     return (
         <ScrollArea className={cn("relative h-full", className)}>
-            <Accordion type="multiple" value={menuKeys} onValueChange={setMenuKeys} className="group/arrow space-y-1.5 pt-1 pb-6">
+            <Accordion
+                type="multiple"
+                value={menuKeys}
+                onValueChange={setMenuKeys}
+                className="group/arrow space-y-1.5 pt-1 pb-6">
                 {items.map((item, key) => (
                     <SidebarNavItem key={key} item={item} pathname={pathname} />
                 ))}
