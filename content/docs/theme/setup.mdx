@@ -4,6 +4,80 @@ title: Theme Setup
 description: Theming with CSS Variables
 ---
 
+## Using CLI
+
+Follow these steps to set up the PaceUI theme in your existing project or create a new one using [shadcn's CLI](https://ui.shadcn.com/docs/cli)
+
+<Steps>
+
+    <Step>Setup for PaceUI</Step>
+
+    It will add useful dependencies, extra variables, and a default theme to your CSS file.
+
+    <InstallationCommand command='npx shadcn@canary add "~website/r/init" # default = neutral & primary = blue' />
+
+    <Step>Change default color</Step>
+
+    You can choose from various base colors: `gray`, `slate`, `zinc`, or `neutral` (Neutral is the default color applied by the CLI).
+
+    <Tabs defaultValue="neutral" className="mt-3">
+        <TabsList>
+            <TabsTrigger value="neutral">Neutral</TabsTrigger>
+            <TabsTrigger value="slate">Slate</TabsTrigger>
+            <TabsTrigger value="gray">Gray</TabsTrigger>
+            <TabsTrigger value="zinc">Zinc</TabsTrigger>
+        </TabsList>
+        <TabsContent value="neutral" className="mt-4">
+            <InstallationCommand command='npx shadcn@canary add "~website/r/styles/default-neutral"   # default = neutral' />
+        </TabsContent>
+        <TabsContent value="slate" className="mt-4">
+            <InstallationCommand command='npx shadcn@canary add "~website/r/styles/default-slate"   # default = slate' />
+        </TabsContent>
+        <TabsContent value="gray" className="mt-4">
+            <InstallationCommand command='npx shadcn@canary add "~website/r/styles/default-gray"   # default = gray' />
+        </TabsContent>
+        <TabsContent value="zinc" className="mt-4">
+            <InstallationCommand command='npx shadcn@canary add "~website/r/styles/default-zinc"   # default = zinc' />
+        </TabsContent>
+    </Tabs>
+
+    <Step>Change primary color</Step>
+
+    You can choose from various primary (pre-defined by PaceUI) colors: `blue`, `purple`, `green`, `teal`, `orange` or `rose` (Blue is the default color applied by the CLI).
+
+    <Tabs defaultValue="blue" className="mt-3">
+        <TabsList>
+            <TabsTrigger value="blue">Blue</TabsTrigger>
+            <TabsTrigger value="purple">Purple</TabsTrigger>
+            <TabsTrigger value="green">Gray</TabsTrigger>
+            <TabsTrigger value="teal">Zinc</TabsTrigger>
+            <TabsTrigger value="orange">Neutral</TabsTrigger>
+            <TabsTrigger value="rose">Neutral</TabsTrigger>
+        </TabsList>
+        <TabsContent value="blue" className="mt-4">
+            <InstallationCommand command='npx shadcn@canary add "~website/r/styles/primary-blue"  # primary = blue' />
+        </TabsContent>
+        <TabsContent value="purple" className="mt-4">
+             <InstallationCommand command='npx shadcn@canary add "~website/r/styles/primary-purple"  # primary = purple' />
+        </TabsContent>
+        <TabsContent value="green" className="mt-4">
+             <InstallationCommand command='npx shadcn@canary add "~website/r/styles/primary-green"  # primary = green' />
+        </TabsContent>
+        <TabsContent value="teal" className="mt-4">
+             <InstallationCommand command='npx shadcn@canary add "~website/r/styles/primary-teal"  # primary = teal' />
+        </TabsContent>
+        <TabsContent value="orange" className="mt-4">
+             <InstallationCommand command='npx shadcn@canary add "~website/r/styles/primary-orange"  # primary = orange' />
+        </TabsContent>
+        <TabsContent value="rose" className="mt-4">
+             <InstallationCommand command='npx shadcn@canary add "~website/r/styles/primary-rose"  # primary = rose' />
+        </TabsContent>
+    </Tabs>
+</Steps>
+
+## Manual
+
+
 Here are the steps to set up the PaceUI theme in your existing project:
 
 <Steps>
