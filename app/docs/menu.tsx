@@ -62,7 +62,7 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             {
                 title: "Dark mode",
                 link: base.theme + "/dark-mode",
-                comingSoon: true,
+                new: true,
             },
         ],
     },
