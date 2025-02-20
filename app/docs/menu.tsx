@@ -10,6 +10,7 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
     {
         title: "Getting Started",
         icon: <BookOpenTextIcon />,
+        expanded: true,
         items: [
             {
                 title: "Introduction",
@@ -28,12 +29,8 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
     {
         title: "Installation",
         icon: <SquareDashedBottomCodeIcon />,
-        expanded: false,
+        expanded: true,
         items: [
-            {
-                title: "Manual",
-                link: base.installation + "/manual",
-            },
             {
                 title: "Next.js",
                 link: base.installation + "/next",
@@ -44,12 +41,15 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: base.installation + "/vite",
                 new: true,
             },
+            {
+                title: "Manual",
+                link: base.installation + "/manual",
+            },
         ],
     },
     {
         title: "Theme",
         icon: <PaletteIcon />,
-        expanded: false,
         items: [
             {
                 title: "Conventions",
