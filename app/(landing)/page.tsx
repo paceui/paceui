@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/website/components/Logo";
+import { InstallationCommand } from "@/website/components/docs/installation-command";
 import { Topbar } from "@/website/components/layouts/topbar";
 import { Newsletter } from "@/website/components/newsletter";
 import { routes } from "@/website/utils/routes";
@@ -12,24 +13,26 @@ export default function LandingPage() {
     return (
         <div className="container">
             <Topbar />
-            <div className="mt-16 mb-16 md:mt-40">
+            <div className="mt-8 mb-16 md:mt-24">
                 <div className="flex flex-col items-center justify-center">
-                    <div className="max-w-[600px] space-y-10 text-center">
+                    <div className="max-w-[600px] text-center">
                         <div>
-                            <Badge variant="soft" color="primary" className="font-medium">
-                                Preview
-                            </Badge>
+                            <Link href={routes.docs.installation}>
+                                <Badge variant="soft" color="success" className="font-medium">
+                                    CLI is available
+                                </Badge>
+                            </Link>
 
                             <div className="flex items-center justify-center gap-4">
                                 <Logo className="size-16" />
                                 <p className="text-3xl font-semibold sm:text-7xl">PaceUI</p>
                             </div>
                         </div>
-                        <p className="text-default-800 sm:text-xl">
+                        <p className="text-default-800 sm:text-xl mt-4">
                             Easily integrate, customizable, copy-pasteable Tailwind components and variants into your
                             React and Next.js apps
                         </p>
-                        <div className="flex justify-center gap-6 max-sm:flex-col">
+                        <div className="flex justify-center gap-6 max-sm:flex-col mt-8">
                             <Button size="lg" variant="ghost" asChild>
                                 <Link href={routes.docs.home}>
                                     <BookOpenTextIcon />
@@ -44,9 +47,16 @@ export default function LandingPage() {
                                 </Link>
                             </Button>
                         </div>
+                        <div className="mt-8 flex flex-col items-center justify-center gap-2 md:mt-24">
+                            <p className="font-medium italic">&#34;Single-command setup with zero dependency&#34;</p>
+                            <InstallationCommand
+                                wrapperClassname="mt-0"
+                                className="[&>.shiki]:!pe-10"
+                                command='npx shadcn@canary add "https://paceui.com/r/init"'></InstallationCommand>
+                        </div>
                     </div>
                 </div>
-                <div className="mt-16 flex justify-center md:mt-40">
+                <div className="mt-8 flex justify-center md:mt-24">
                     <Newsletter />
                 </div>
             </div>

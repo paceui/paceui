@@ -15,7 +15,15 @@ import { cn } from "@/lib/utils";
 import { copyToClipboard } from "@/website/utils/docs";
 import { PackageManager, getCommandAsPackageManager } from "@/website/utils/installation-command";
 
-export const InstallationCommand = ({ command: rawCommand = "" }: { command: string }) => {
+export const InstallationCommand = ({
+    command: rawCommand = "",
+    className,
+    wrapperClassname,
+}: {
+    command: string;
+    className?: string;
+    wrapperClassname?: string;
+}) => {
     const [code, setCode] = useState<string>("");
     const [hasCopied, setHasCopied] = useState(false);
 
@@ -40,9 +48,9 @@ export const InstallationCommand = ({ command: rawCommand = "" }: { command: str
     }, [command]);
 
     return (
-        <div className="relative mt-4 mb-3">
+        <div className={cn("relative mt-4 mb-3", wrapperClassname)}>
             <div
-                className="overflow-hidden rounded text-sm select-all [&>.shiki]:p-4"
+                className={cn("overflow-hidden rounded text-sm select-all [&>.shiki]:p-4", className)}
                 dangerouslySetInnerHTML={{ __html: code }}
             />
             <div className="absolute end-4 top-3">

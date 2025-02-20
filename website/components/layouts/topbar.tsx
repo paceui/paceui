@@ -60,8 +60,8 @@ export const Topbar = ({ menuItems }: TopbarProps) => {
                 </Drawer.Root>
                 <Link href={routes.landing} className="flex items-center">
                     <span className="text-lg font-medium">PaceUI</span>
-                    <span className="bg-primary/10 text-primary ms-1.5 rounded-full px-1.5 py-0.5 text-xs font-medium">
-                        Preview
+                    <span className="bg-success text-success-foreground ms-1.5 rounded-full px-1.5 py-0.5 text-xs font-medium tracking-wide">
+                        Beta
                     </span>
                 </Link>
                 <div className="hidden gap-2 md:inline-flex md:gap-6">
