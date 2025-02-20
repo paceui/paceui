@@ -37,12 +37,12 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             {
                 title: "Next.js",
                 link: base.installation + "/next",
-                comingSoon: true,
+                new: true,
             },
             {
                 title: "Vite",
                 link: base.installation + "/vite",
-                comingSoon: true,
+                new: true,
             },
         ],
     },
@@ -58,7 +58,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             {
                 title: "Setup",
                 link: base.theme + "/setup",
-                new: true,
             },
             {
                 title: "Dark mode",
@@ -75,7 +74,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             {
                 title: "Accordion",
                 link: components + "/accordion",
-                new: true,
             },
             {
                 title: "Alert",
@@ -104,12 +102,10 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             {
                 title: "Checkbox",
                 link: components + "/checkbox",
-                new: true,
             },
             {
                 title: "Dialog",
                 link: components + "/dialog",
-                new: true,
             },
             {
                 title: "Dropdown Menu",
@@ -126,7 +122,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             {
                 title: "Pagination",
                 link: components + "/pagination",
-                new: true,
             },
             {
                 title: "Popover",
@@ -143,7 +138,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             {
                 title: "Skeleton",
                 link: components + "/skeleton",
-                new: true,
             },
             {
                 title: "Switch",
@@ -152,7 +146,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             {
                 title: "Tabs",
                 link: components + "/tabs",
-                new: true,
             },
         ],
     },

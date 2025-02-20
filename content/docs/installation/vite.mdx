@@ -4,4 +4,129 @@ title: Vite
 description: Set up and configure Vite
 ---
 
-<Callout>Coming soon</Callout>
+<Callout>**Note:** We use the shadcn CLI for setup and adding components</Callout>
+
+<Steps>
+
+    <Step>Create project</Step>
+
+    Begin by creating a new React project with `vite`:
+
+    <InstallationCommand command="npm create vite@latest"/>
+
+    <Step>Add Tailwind and its configuration</Step>
+
+    Install `tailwindcss` and its peer dependencies
+    <InstallationCommand command="npm install -D tailwindcss @tailwindcss/vite"/>
+
+    Add this import statement to your main CSS file, `src/index.css` in our case:
+
+    <CodePreview lang="css"
+                 code={`@import "tailwindcss";
+
+/* ... */`}/>
+
+    <Step>Edit tsconfig.json file</Step>
+
+    In the latest version of Vite, TypeScript configuration is split into three files, with two requiring modifications.
+
+    Update the `compilerOptions` section in both `tsconfig.json` and `tsconfig.app.json` by adding the `baseUrl` and `paths` properties.
+
+    <CodePreview lang="js" code={`{
+    "files": [],
+    "references": [
+        {
+            "path": "./tsconfig.app.json"
+        },
+        {
+            "path": "./tsconfig.node.json"
+        }
+    ],
+     "compilerOptions": { // [!code highlight]
+        "baseUrl": ".", // [!code highlight]
+        "paths": { // [!code highlight]
+            "@/*": ["./src/*"] // [!code highlight]
+        } // [!code highlight]
+     } // [!code highlight]
+}`}/>
+
+    <Step>Edit tsconfig.app.json file</Step>
+
+    Add the following code to the `tsconfig.app.json` file to configure path resolution for your IDE:
+
+    <CodePreview lang="js" code={`{
+    "compilerOptions": {
+        // ...
+        "baseUrl": ".", // [!code highlight]
+        "paths": { // [!code highlight]
+            "@/*": [ // [!code highlight]
+                "./src/*" // [!code highlight]
+            ] // [!code highlight]
+        } // [!code highlight]
+    // ...
+    }
+}`}/>
+
+    <Step> Add plugin to vite.config.ts</Step>
+
+    Add the `@tailwindcss/vite` plugin to your Vite configuration.
+
+    <CodePreview lang="ts" code={`import tailwindcss from "@tailwindcss/vite" // [!code highlight]
+import react from "@vitejs/plugin-react"
+import { defineConfig } from "vite"
+
+export default defineConfig({
+    plugins: [react(), tailwindcss()], // [!code highlight]
+})`}/>
+
+    <Step> Update vite.config.ts</Step>
+
+    Add the following code to `vite.config.ts` to ensure your app can resolve paths without errors:
+
+    <InstallationCommand command="npm install -D @types/node  # (This way, you can import 'path' without any errors)"/>
+
+    <CodePreview lang="ts" code={`import path from "path" // [!code highlight]
+import tailwindcss from "@tailwindcss/vite"
+import react from "@vitejs/plugin-react"
+import { defineConfig } from "vite"
+
+export default defineConfig({
+    plugins: [react(), tailwindcss()],
+    resolve: { // [!code highlight]
+        alias: { // [!code highlight]
+            "@": path.resolve(__dirname, "./src"), // [!code highlight]
+        }, // [!code highlight]
+    }, // [!code highlight]
+})`}/>
+
+    <Step>Run the CLI</Step>
+
+    Run the `init` command with default options to set up:
+
+    <InstallationCommand command="npx shadcn@canary init -d"/>
+
+    <Step>Setup for PaceUI</Step>
+
+    <InstallationCommand command='npx shadcn@canary add "~website/r/init"' />
+
+    **Note:** It will add useful dependencies, extra variables, and a default theme to your CSS file.
+    You can explore more customization options in [theme](/docs/theme)
+
+    <Step>That's it</Step>
+
+    You’re ready to start adding components to your project
+
+    <InstallationCommand command='npx shadcn@canary add "~website/r/components/button"' />
+
+    The command above will add the `Button` component to your project. You can then import it using the following syntax:
+
+    <CodePreview code={`import { Button } from "@/components/ui/button" // [!code highlight]
+
+    export default function Home() {
+        return (
+            <div>
+                <Button>Click me</Button>
+            </div>
+        )
+    }`}/>
+</Steps>

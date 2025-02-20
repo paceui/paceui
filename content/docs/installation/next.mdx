@@ -4,4 +4,39 @@ title: Next.js
 description: Set up and configure Next.js
 ---
 
-<Callout>Coming soon</Callout>
+<Callout>**Note:** We use the shadcn CLI for setup and adding components</Callout>
+
+<Steps>
+
+    <Step>Create project</Step>
+
+    Run the `init` (with default options) command to create a new Next.js project or set up an existing one:
+
+    <InstallationCommand command="npx shadcn@canary init -d"/>
+
+    <Step>Configure for PaceUI</Step>
+
+    <InstallationCommand command='npx shadcn@canary add "~website/r/init"' />
+
+    **Note:** It will add useful dependencies, extra variables, and a default theme to your Tailwind config and CSS file.
+    You can explore more customization options in [theme](/docs/theme)
+
+    <Step>That's it</Step>
+
+    You’re ready to start adding components to your project
+
+    <InstallationCommand command='npx shadcn@canary add "~website/r/components/button"' />
+
+    The command above will add the `Button` component to your project. You can then import it using the following syntax:
+
+    <CodePreview code={`import { Button } from "@/components/ui/button" // [!code highlight]
+
+    export default function Home() {
+        return (
+            <div>
+                <Button>Click me</Button>
+            </div>
+        )
+    }`}/>
+
+</Steps>
