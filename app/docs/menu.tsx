@@ -140,6 +140,11 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: components + "/skeleton",
             },
             {
+                title: "Slider",
+                link: components + "/slider",
+                new: true,
+            },
+            {
                 title: "Switch",
                 link: components + "/switch",
             },
@@ -167,9 +172,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             },
             {
                 title: "Scroll Area",
-            },
-            {
-                title: "Slider",
             },
             {
                 title: "Table",

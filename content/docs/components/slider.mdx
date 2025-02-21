@@ -1,0 +1,109 @@
+---
+slug: components-slider
+title: Slider
+description: Allows users to adjust a value within a specified range by sliding a handle
+links:
+    api: https://www.radix-ui.com/docs/primitives/components/slider#api-reference
+---
+
+<DemoCodePreview
+    path="demo/docs/slider/default.tsx"
+    props={[
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Installation
+
+<Tabs defaultValue="cli" className="mt-3">
+    <TabsList>
+        <TabsTrigger value="cli">CLI</TabsTrigger>
+        <TabsTrigger value="manual">Manual</TabsTrigger>
+    </TabsList>
+    <TabsContent value="cli" className="mt-4">
+        <InstallationCommand command='npx shadcn@latest add "~website/r/components/slider"'/>
+    </TabsContent>
+    <TabsContent value="manual" className="mt-4">
+        <Steps>
+            <Step>
+                Install the following dependencies
+            </Step>
+            <InstallationCommand command="npm install @radix-ui/react-slider"/>
+            <Step>
+                Copy and paste the following code into your project
+            </Step>
+            <CodePreview path='components/ui/slider.tsx' collapsible></CodePreview>
+            <Step>
+                Update the import paths to fit your project setup
+            </Step>
+        </Steps>
+    </TabsContent>
+</Tabs>
+
+## Examples
+
+### Range Slider
+
+Use `value` or `defaultValue` with an array of two numbers [a, b] to display the slider as a range
+
+<DemoCodePreview
+    path="demo/docs/slider/range.tsx"
+    props={[
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### Controlled
+
+<DemoCodePreview
+    path="demo/docs/slider/controlled.tsx"
+    props={[
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Props
+
+| Prop  | Type                                              | Default |
+|-------|---------------------------------------------------|---------|
+| color | `default` `primary` `secondary` `success` `error` | default |
+| size  | `sm` `md` `lg `                                   | md      |
