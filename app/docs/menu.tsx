@@ -157,6 +157,11 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: components + "/toggle",
                 new: true,
             },
+            {
+                title: "Tooltip",
+                link: components + "/tooltip",
+                new: true,
+            },
         ],
     },
     {
@@ -178,9 +183,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             },
             {
                 title: "Textarea",
-            },
-            {
-                title: "Tooltip",
             },
         ],
     },
