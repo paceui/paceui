@@ -21,21 +21,30 @@ links:
 
 ## Installation
 
-<Steps>
-    <Step>
-        Install the following dependencies
-    </Step>
-    <InstallationCommand command="npm install @radix-ui/react-accordion" />
-    <Step>
-        Copy and paste the following code into your project
-    </Step>
-    <CodePreview path='components/ui/accordion.tsx' collapsible></CodePreview>
-    <Step>
-        Add following animation css to `app.css` file
-    </Step>
-    <CodePreview lang="css" code={`@theme {
-    --animate-accordion-down: accordion-down 0.2s ease-out;
-    --animate-accordion-up: accordion-up 0.2s ease-out;
+<Tabs defaultValue="cli" className="mt-3">
+    <TabsList>
+        <TabsTrigger value="cli">CLI</TabsTrigger>
+        <TabsTrigger value="manual">Manual</TabsTrigger>
+    </TabsList>
+    <TabsContent value="cli" className="mt-4">
+        <InstallationCommand command={`npx shadcn@latest add "~website/r/components/accordion"`} />
+    </TabsContent>
+    <TabsContent value="manual" className="mt-4">
+        <Steps>
+            <Step>
+                Install the following dependencies
+            </Step>
+            <InstallationCommand command="npm install @radix-ui/react-accordion" />
+            <Step>
+                Copy and paste the following code into your project
+            </Step>
+            <CodePreview path='components/ui/accordion.tsx' collapsible></CodePreview>
+            <Step>
+                Add following animation css to `app.css` file
+            </Step>
+            <CodePreview lang="css" code={`@theme {
+--animate-accordion-down: accordion-down 0.2s ease-out;
+--animate-accordion-up: accordion-up 0.2s ease-out;
 
     @keyframes accordion-down {
         from {
@@ -56,10 +65,13 @@ links:
     }
 }`} />
 
-    <Step>
-        Update the import paths to fit your project setup
-    </Step>
-</Steps>
+            <Step>
+                Update the import paths to fit your project setup
+            </Step>
+        </Steps>
+    </TabsContent>
+</Tabs>
+
 
 ## Examples
 

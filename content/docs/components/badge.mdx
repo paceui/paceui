@@ -33,15 +33,27 @@ description: To display a small indicator for notifications, status, or counts
 
 ## Installation
 
-<Steps>
-    <Step>
-        Copy and paste the following code into your project
-    </Step>
-    <CodePreview path='components/ui/badge.tsx' collapsible></CodePreview>
-    <Step>
-        Update the import paths to fit your project setup
-    </Step>
-</Steps>
+<Tabs defaultValue="cli" className="mt-3">
+    <TabsList>
+        <TabsTrigger value="cli">CLI</TabsTrigger>
+        <TabsTrigger value="manual">Manual</TabsTrigger>
+    </TabsList>
+    <TabsContent value="cli" className="mt-4">
+        <InstallationCommand command='npx shadcn@latest add "~website/r/components/badge"'/>
+    </TabsContent>
+    <TabsContent value="manual" className="mt-4">
+        <Steps>
+            <Step>
+                Copy and paste the following code into your project
+            </Step>
+            <CodePreview path='components/ui/badge.tsx' collapsible></CodePreview>
+            <Step>
+                Update the import paths to fit your project setup
+            </Step>
+        </Steps>
+
+    </TabsContent>
+</Tabs>
 
 ## Examples
 
