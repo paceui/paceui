@@ -225,4 +225,15 @@ export const componentRegistries: RegistryItem[] = [
             },
         ],
     },
+    {
+        name: "toggle",
+        type: "registry:ui",
+        dependencies: ["@radix-ui/react-toggle"],
+        files: [
+            {
+                path: "ui/toggle.tsx",
+                type: "registry:ui",
+            },
+        ],
+    },
 ];
