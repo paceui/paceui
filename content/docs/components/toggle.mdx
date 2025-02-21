@@ -1,0 +1,148 @@
+---
+slug: components-toggle
+title: Toggle
+description: Lets users switch between two options or states with a simple on/off interaction
+links:
+    api: https://www.radix-ui.com/docs/primitives/components/toggle#api-reference
+    snip: /snips/components/toggle
+---
+
+<DemoCodePreview
+    path="demo/docs/toggle/default.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "ghost",
+            values: ["ghost", "outline", "solid"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Installation
+
+<Steps>
+    <Step>
+        Install the following dependencies
+    </Step>
+    <InstallationCommand command="npm install @radix-ui/react-toggle"/>
+    <Step>
+        Copy and paste the following code into your project
+    </Step>
+    <CodePreview path='components/ui/toggle.tsx' collapsible></CodePreview>
+    <Step>
+        Update the import paths to fit your project setup
+    </Step>
+</Steps>
+
+## Examples
+
+### With Text
+
+<DemoCodePreview
+    path="demo/docs/toggle/with-text.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "ghost",
+            values: ["ghost", "outline", "solid"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### Disabled
+
+<DemoCodePreview
+    path="demo/docs/toggle/disabled.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "ghost",
+            values: ["ghost", "outline", "solid"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### Controlled
+
+<DemoCodePreview
+    path="demo/docs/toggle/controlled.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "ghost",
+            values: ["ghost", "outline", "solid"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Props
+
+| Prop    | Type                                              | Default |
+|---------|---------------------------------------------------|---------|
+| size    | `sm` `md` `lg `                                   | md      |
+| variant | `solid` `outline` `ghost`                         | solid   |
+| color   | `default` `primary` `secondary` `success` `error` | default |

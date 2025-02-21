@@ -147,6 +147,11 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 title: "Tabs",
                 link: components + "/tabs",
             },
+            {
+                title: "Toggle",
+                link: components + "/toggle",
+                new: true,
+            },
         ],
     },
     {
@@ -171,9 +176,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             },
             {
                 title: "Textarea",
-            },
-            {
-                title: "Toggle",
             },
             {
                 title: "Tooltip",

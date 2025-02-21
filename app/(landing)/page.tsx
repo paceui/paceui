@@ -28,11 +28,11 @@ export default function LandingPage() {
                                 <p className="text-3xl font-semibold sm:text-7xl">PaceUI</p>
                             </div>
                         </div>
-                        <p className="text-default-800 sm:text-xl mt-4">
+                        <p className="text-default-800 mt-4 sm:text-xl">
                             Easily integrate, customizable, copy-pasteable Tailwind components and variants into your
                             React and Next.js apps
                         </p>
-                        <div className="flex justify-center gap-6 max-sm:flex-col mt-8">
+                        <div className="mt-8 flex justify-center gap-6 max-sm:flex-col">
                             <Button size="lg" variant="ghost" asChild>
                                 <Link href={routes.docs.home}>
                                     <BookOpenTextIcon />
