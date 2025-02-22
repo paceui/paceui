@@ -1,0 +1,12 @@
+{
+    "name": "tooltip",
+    "type": "registry:ui",
+    "dependencies": ["@radix-ui/react-tooltip"],
+    "files": [
+        {
+            "path": "ui/tooltip.tsx",
+            "type": "registry:ui",
+            "content": "import * as TooltipPrimitive from \"@radix-ui/react-tooltip\";\nimport * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nexport const TooltipProvider = TooltipPrimitive.Provider;\n\nexport const Tooltip = TooltipPrimitive.Root;\n\nexport const TooltipTrigger = TooltipPrimitive.Trigger;\n\nexport type TooltipContentProps = React.ComponentProps<typeof TooltipPrimitive.Content>;\n\nexport const TooltipContent = ({ className, sideOffset = 4, ...props }: TooltipContentProps) => (\n    <TooltipPrimitive.Content\n        sideOffset={sideOffset}\n        className={cn(\n            \"bg-popover text-popover-foreground animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 overflow-hidden rounded border px-3 py-1.5 text-sm shadow-md\",\n            className,\n        )}\n        {...props}\n    />\n);\n"
+        }
+    ]
+}

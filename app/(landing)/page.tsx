@@ -13,7 +13,7 @@ export default function LandingPage() {
     return (
         <div className="container">
             <Topbar />
-            <div className="mt-8 mb-16 md:mt-24">
+            <div className="mt-8 mb-8 2xl:mt-24">
                 <div className="flex flex-col items-center justify-center">
                     <div className="max-w-[600px] text-center">
                         <div>
@@ -47,7 +47,7 @@ export default function LandingPage() {
                                 </Link>
                             </Button>
                         </div>
-                        <div className="mt-8 flex flex-col items-center justify-center gap-2 md:mt-24">
+                        <div className="mt-8 flex flex-col items-center justify-center gap-2 xl:mt-16 2xl:mt-24">
                             <p className="font-medium italic">&#34;Single-command setup with zero dependency&#34;</p>
                             <InstallationCommand
                                 wrapperClassname="mt-0"
@@ -56,7 +56,7 @@ export default function LandingPage() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-8 flex justify-center md:mt-24">
+                <div className="mt-8 flex justify-center xl:mt-16 2xl:mt-24 ">
                     <Newsletter />
                 </div>
             </div>

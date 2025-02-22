@@ -237,6 +237,17 @@ export const componentRegistries: RegistryItem[] = [
         ],
     },
     {
+        name: "slider",
+        type: "registry:ui",
+        dependencies: ["@radix-ui/react-slider"],
+        files: [
+            {
+                path: "ui/slider.tsx",
+                type: "registry:ui",
+            },
+        ],
+    },
+    {
         name: "switch",
         type: "registry:ui",
         dependencies: ["@radix-ui/react-switch"],
@@ -296,6 +307,17 @@ export const componentRegistries: RegistryItem[] = [
         files: [
             {
                 path: "ui/toggle-group.tsx",
+                type: "registry:ui",
+            },
+        ],
+    },
+    {
+        name: "tooltip",
+        type: "registry:ui",
+        dependencies: ["@radix-ui/react-tooltip"],
+        files: [
+            {
+                path: "ui/tooltip.tsx",
                 type: "registry:ui",
             },
         ],

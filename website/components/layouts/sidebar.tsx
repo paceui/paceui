@@ -83,7 +83,7 @@ const SidebarNavItem = ({ item, pathname }: { item: SidebarNavItem; pathname: st
                 </div>
             </AccordionTrigger>
             <AccordionContent
-                className={cn("mx-3 pb-0", {
+                className={cn("mx-3 pb-0 space-y-0.5", {
                     "pointer-events-none": item.comingSoon,
                 })}>
                 {item.items.map((item, key) => (
@@ -94,7 +94,7 @@ const SidebarNavItem = ({ item, pathname }: { item: SidebarNavItem; pathname: st
     ) : (
         <Link
             className={cn(
-                "text-default-700 hover:bg-default-100 mb-0.5 flex items-center gap-2 rounded px-2.5 py-2 text-[15px]/none",
+                "text-default-700 hover:bg-default-100 flex items-center gap-2 rounded px-2.5 h-8 text-[15px]/none",
                 {
                     "!bg-primary/10 !text-primary": isActive,
                 },
