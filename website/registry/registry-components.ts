@@ -172,6 +172,17 @@ export const componentRegistries: RegistryItem[] = [
         ],
     },
     {
+        name: "progress",
+        type: "registry:ui",
+        dependencies: ["@radix-ui/react-progress"],
+        files: [
+            {
+                path: "ui/progress.tsx",
+                type: "registry:ui",
+            },
+        ],
+    },
+    {
         name: "select",
         type: "registry:ui",
         dependencies: ["@radix-ui/react-select"],

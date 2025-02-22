@@ -1,0 +1,111 @@
+---
+slug: components-progress
+title: Progress
+description: Visually indicates the completion status of a task or process
+links:
+    api: https://www.radix-ui.com/docs/primitives/components/progress#api-reference
+---
+
+<DemoCodePreview
+    path="demo/docs/progress/default.tsx"
+    props={[
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+        {
+            title: "Label",
+            name: "showLabel",
+            type: "switch",
+            defaultValue: true,
+        },
+        {
+            title: "Striped",
+            name: "isStriped",
+            type: "switch",
+            defaultValue: false,
+        },
+    ]}
+/>
+
+## Installation
+
+<Tabs defaultValue="cli" className="mt-3">
+    <TabsList>
+        <TabsTrigger value="cli">CLI</TabsTrigger>
+        <TabsTrigger value="manual">Manual</TabsTrigger>
+    </TabsList>
+    <TabsContent value="cli" className="mt-4">
+        <InstallationCommand command='npx shadcn@latest add "~website/r/components/progress"'/>
+    </TabsContent>
+    <TabsContent value="manual" className="mt-4">
+        <Steps>
+            <Step>
+                Install the following dependencies
+            </Step>
+            <InstallationCommand command="npm install @radix-ui/react-progress"/>
+            <Step>
+                Copy and paste the following code into your project
+            </Step>
+            <CodePreview path='components/ui/progress.tsx' collapsible></CodePreview>
+            <Step>
+                Update the import paths to fit your project setup
+            </Step>
+        </Steps>
+    </TabsContent>
+</Tabs>
+
+## Examples
+
+### Processing
+
+<DemoCodePreview
+    path="demo/docs/progress/processing.tsx"
+    props={[
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "primary",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+        {
+            title: "Label",
+            name: "showLabel",
+            type: "switch",
+            defaultValue: true,
+        },
+        {
+            title: "Striped",
+            name: "isStriped",
+            type: "switch",
+            defaultValue: true,
+        }
+    ]}
+/>
+
+## Props
+
+| Prop           | Type                                              | Default |
+|----------------|---------------------------------------------------|---------|
+| size           | `sm` `md` `lg`                                    | md      |
+| color          | `default` `primary` `secondary` `success` `error` | default |
+| showValueLabel | Boolean                                           | false   |
+| isStriped      | Boolean                                           | false   |

@@ -128,6 +128,11 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: components + "/popover",
             },
             {
+                title: "Progress",
+                link: components + "/progress",
+                new: true,
+            },
+            {
                 title: "Select",
                 link: components + "/select",
             },
@@ -169,9 +174,6 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
         icon: <HourglassIcon />,
         comingSoon: true,
         items: [
-            {
-                title: "Progress",
-            },
             {
                 title: "Radio Group",
             },
