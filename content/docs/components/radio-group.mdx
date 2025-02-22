@@ -1,20 +1,20 @@
 ---
-slug: components-toggle
-title: Toggle
-description: Lets users switch between two options or states with a simple on/off interaction
+slug: components-radio-group
+title: Radio Group
+description: Allows users to select one option from a set of choices
 links:
-    api: https://www.radix-ui.com/docs/primitives/components/toggle#api-reference
+    api: https://www.radix-ui.com/docs/primitives/components/radio-group#api-reference
 ---
 
 <DemoCodePreview
-    path="demo/docs/toggle/default.tsx"
+    path="demo/docs/radio-group/default.tsx"
     props={[
         {
             title: "Variant",
             name: "variant",
             type: "select",
-            defaultValue: "ghost",
-            values: ["ghost", "outline", "solid"],
+            defaultValue: "outline",
+            values: ["outline", "soft"],
         },
         {
             title: "Color",
@@ -41,38 +41,40 @@ links:
         <TabsTrigger value="manual">Manual</TabsTrigger>
     </TabsList>
     <TabsContent value="cli" className="mt-4">
-        <InstallationCommand command='npx shadcn@latest add "~website/r/components/toggle"'/>
+        <InstallationCommand command='npx shadcn@latest add "~website/r/components/radio-group"'/>
     </TabsContent>
     <TabsContent value="manual" className="mt-4">
         <Steps>
             <Step>
                 Install the following dependencies
             </Step>
-            <InstallationCommand command="npm install @radix-ui/react-toggle"/>
+            <InstallationCommand command="npm install @radix-ui/react-radio-group"/>
             <Step>
                 Copy and paste the following code into your project
             </Step>
-            <CodePreview path='components/ui/toggle.tsx' collapsible></CodePreview>
+            <CodePreview path='components/ui/radio-group.tsx' collapsible></CodePreview>
             <Step>
                 Update the import paths to fit your project setup
             </Step>
         </Steps>
+
     </TabsContent>
+
 </Tabs>
 
-## Examples
+### Disabled
 
-### With Text
+If you pass `disabled` prop then it will disable the radio group
 
 <DemoCodePreview
-    path="demo/docs/toggle/with-text.tsx"
+    path="demo/docs/radio-group/disabled.tsx"
     props={[
         {
             title: "Variant",
             name: "variant",
             type: "select",
-            defaultValue: "ghost",
-            values: ["ghost", "outline", "solid"],
+            defaultValue: "outline",
+            values: ["outline", "soft"],
         },
         {
             title: "Color",
@@ -85,23 +87,25 @@ links:
             title: "Size",
             name: "size",
             type: "select",
-            defaultValue: "md",
+            defaultValue: "lg",
             values: ["sm", "md", "lg"],
         },
     ]}
 />
 
-### Disabled
+### Icon
+
+If you pass `ReactNode` to `icon` prop then it will render custom radio icon
 
 <DemoCodePreview
-    path="demo/docs/toggle/disabled.tsx"
+    path="demo/docs/radio-group/icon.tsx"
     props={[
         {
             title: "Variant",
             name: "variant",
             type: "select",
-            defaultValue: "ghost",
-            values: ["ghost", "outline", "solid"],
+            defaultValue: "outline",
+            values: ["outline", "soft"],
         },
         {
             title: "Color",
@@ -114,7 +118,7 @@ links:
             title: "Size",
             name: "size",
             type: "select",
-            defaultValue: "md",
+            defaultValue: "lg",
             values: ["sm", "md", "lg"],
         },
     ]}
@@ -123,14 +127,14 @@ links:
 ### Controlled
 
 <DemoCodePreview
-    path="demo/docs/toggle/controlled.tsx"
+    path="demo/docs/radio-group/controlled.tsx"
     props={[
         {
             title: "Variant",
             name: "variant",
             type: "select",
-            defaultValue: "ghost",
-            values: ["ghost", "outline", "solid"],
+            defaultValue: "outline",
+            values: ["outline", "soft"],
         },
         {
             title: "Color",
@@ -153,6 +157,6 @@ links:
 
 | Prop    | Type                                              | Default |
 |---------|---------------------------------------------------|---------|
-| size    | `sm` `md` `lg `                                   | md      |
-| variant | `solid` `outline` `ghost`                         | solid   |
+| variant | `soft` `outline`                                  | outline |
 | color   | `default` `primary` `secondary` `success` `error` | default |
+| size    | `sm` `md` `lg `                                   | md      |

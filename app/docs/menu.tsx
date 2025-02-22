@@ -133,6 +133,11 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 new: true,
             },
             {
+                title: "Radio Group",
+                link: components + "/radio-group",
+                new: true,
+            },
+            {
                 title: "Scroll Area",
                 link: components + "/scroll-area",
                 new: true,
