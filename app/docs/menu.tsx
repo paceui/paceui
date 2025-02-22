@@ -133,6 +133,11 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 new: true,
             },
             {
+                title: "Scroll Area",
+                link: components + "/scroll-area",
+                new: true,
+            },
+            {
                 title: "Select",
                 link: components + "/select",
             },

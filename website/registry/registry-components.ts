@@ -183,6 +183,17 @@ export const componentRegistries: RegistryItem[] = [
         ],
     },
     {
+        name: "scroll-area",
+        type: "registry:ui",
+        dependencies: ["@radix-ui/react-scroll-area"],
+        files: [
+            {
+                path: "ui/scroll-area.tsx",
+                type: "registry:ui",
+            },
+        ],
+    },
+    {
         name: "select",
         type: "registry:ui",
         dependencies: ["@radix-ui/react-select"],

@@ -1,0 +1,47 @@
+---
+slug: components-scroll-area
+title: Scroll Area
+description: Provides user-friendly scrolling within a fixed container to access overflow content
+links:
+    api: https://www.radix-ui.com/docs/primitives/components/scroll-area#api-reference
+---
+
+<DemoCodePreview path="demo/docs/scroll-area/default.tsx" />
+
+## Installation
+
+<Tabs defaultValue="cli" className="mt-3">
+    <TabsList>
+        <TabsTrigger value="cli">CLI</TabsTrigger>
+        <TabsTrigger value="manual">Manual</TabsTrigger>
+    </TabsList>
+    <TabsContent value="cli" className="mt-4">
+        <InstallationCommand command='npx shadcn@latest add "~website/r/components/scroll-area"'/>
+    </TabsContent>
+    <TabsContent value="manual" className="mt-4">
+        <Steps>
+            <Step>
+                Install the following dependencies
+            </Step>
+            <InstallationCommand command="npm install @radix-ui/react-scroll-area"/>
+            <Step>
+                Copy and paste the following code into your project
+            </Step>
+            <CodePreview path='components/ui/scroll-area.tsx' collapsible></CodePreview>
+            <Step>
+                Add following config to `tailwind.config.js` file
+            </Step>
+            <Step>
+                Update the import paths to fit your project setup
+            </Step>
+        </Steps>
+    </TabsContent>
+</Tabs>
+
+## Examples
+
+### Horizontal Scroll
+
+Add `<ScrollBar orientation="horizontal"/>` to show horizontal scrollbar
+
+<DemoCodePreview path="demo/docs/scroll-area/horizontal.tsx" />
