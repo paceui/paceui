@@ -23,7 +23,7 @@ export default function LandingPage() {
                                 </Badge>
                             </Link>
 
-                            <div className="flex items-center justify-center gap-4">
+                            <div className="flex items-center justify-center gap-4 starting:blur-sm transition-all duration-500">
                                 <Logo className="size-16" />
                                 <p className="text-3xl font-semibold sm:text-7xl">PaceUI</p>
                             </div>
