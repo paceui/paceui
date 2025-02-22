@@ -164,6 +164,11 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: components + "/switch",
             },
             {
+                title: "Table",
+                link: components + "/table",
+                new: true,
+            },
+            {
                 title: "Tabs",
                 link: components + "/tabs",
             },
@@ -190,10 +195,7 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
         comingSoon: true,
         items: [
             {
-                title: "Scroll Area",
-            },
-            {
-                title: "Table",
+                title: "Toggle Group",
             },
         ],
     },
