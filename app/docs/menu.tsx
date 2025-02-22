@@ -134,13 +134,11 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             },
             {
                 title: "Radio Group",
-                link: components + "/radio-group",
-                new: true,
+                link: components + "/radio-group"
             },
             {
                 title: "Scroll Area",
-                link: components + "/scroll-area",
-                new: true,
+                link: components + "/scroll-area"
             },
             {
                 title: "Select",
@@ -165,8 +163,7 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             },
             {
                 title: "Table",
-                link: components + "/table",
-                new: true,
+                link: components + "/table"
             },
             {
                 title: "Tabs",
@@ -174,18 +171,20 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
             },
             {
                 title: "Textarea",
-                link: components + "/textarea",
-                new: true,
+                link: components + "/textarea"
             },
             {
                 title: "Toggle",
-                link: components + "/toggle",
+                link: components + "/toggle"
+            },
+            {
+                title: "Toggle Group",
+                link: components + "/toggle-group",
                 new: true,
             },
             {
                 title: "Tooltip",
-                link: components + "/tooltip",
-                new: true,
+                link: components + "/tooltip"
             },
         ],
     },
@@ -195,7 +194,7 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
         comingSoon: true,
         items: [
             {
-                title: "Toggle Group",
+                title: "Snippets",
             },
         ],
     },

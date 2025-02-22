@@ -1,0 +1,12 @@
+{
+    "name": "toggle-group",
+    "type": "registry:ui",
+    "dependencies": ["@radix-ui/react-toggle-group"],
+    "files": [
+        {
+            "path": "ui/toggle-group.tsx",
+            "type": "registry:ui",
+            "content": "\"use client\";\n\nimport * as ToggleGroupPrimitive from \"@radix-ui/react-toggle-group\";\nimport * as React from \"react\";\nimport { VariantProps } from \"tailwind-variants\";\n\nimport { toggleTheme } from \"@/components/ui/toggle\";\nimport { cn } from \"@/lib/utils\";\n\nconst ToggleGroupContext = React.createContext<VariantProps<typeof toggleTheme>>(toggleTheme.defaultVariants);\n\nexport type ToggleGroupProps = React.ComponentProps<typeof ToggleGroupPrimitive.Root> &\n    VariantProps<typeof toggleTheme>;\n\nexport const ToggleGroup = ({ className, variant, size, color, children, ...props }: ToggleGroupProps) => (\n    <ToggleGroupPrimitive.Root className={cn(\"flex items-center justify-center gap-1\", className)} {...props}>\n        <ToggleGroupContext.Provider value={{ variant, size, color }}>{children}</ToggleGroupContext.Provider>\n    </ToggleGroupPrimitive.Root>\n);\n\nexport type ToggleGroupItemProps = Omit<React.ComponentProps<typeof ToggleGroupPrimitive.Item>, \"color\"> &\n    VariantProps<typeof toggleTheme>;\n\nexport const ToggleGroupItem = ({ className, children, variant, size, color, ...props }: ToggleGroupItemProps) => {\n    const context = React.use(ToggleGroupContext);\n\n    return (\n        <ToggleGroupPrimitive.Item\n            className={toggleTheme({\n                variant: variant || context.variant,\n                size: size || context.size,\n                color: color || context.color,\n                className,\n            })}\n            {...props}>\n            {children}\n        </ToggleGroupPrimitive.Item>\n    );\n};\n"
+        }
+    ]
+}

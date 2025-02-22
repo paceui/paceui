@@ -1,0 +1,131 @@
+---
+slug: components-toggle-group
+title: Toggle Group
+description: Group component lets users select one option or multiple from a set of toggles
+links:
+    api: https://www.radix-ui.com/docs/primitives/components/toggle-group#api-reference
+---
+
+<DemoCodePreview
+    path="demo/docs/toggle-group/default.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "ghost",
+            values: ["ghost", "outline", "solid"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Installation
+
+<Tabs defaultValue="cli" className="mt-3">
+    <TabsList>
+        <TabsTrigger value="cli">CLI</TabsTrigger>
+        <TabsTrigger value="manual">Manual</TabsTrigger>
+    </TabsList>
+    <TabsContent value="cli" className="mt-4">
+        <InstallationCommand command='npx shadcn@latest add "~website/r/components/toggle-group"' />
+    </TabsContent>
+    <TabsContent value="manual" className="mt-4">
+        <Steps>
+            <Step>
+                Install the following dependencies
+            </Step>
+            <InstallationCommand command="npm install @radix-ui/react-toggle-group" />
+            <Step>
+                Copy and paste the following code into your project
+            </Step>
+            <CodePreview path='components/ui/toggle-group.tsx' collapsible></CodePreview>
+            <Step>
+                Update the import paths to fit your project setup
+            </Step>
+        </Steps>
+    </TabsContent>
+</Tabs>
+
+## Examples
+
+### Single
+
+Set type to `single` for single-choice selection
+
+<DemoCodePreview
+    path="demo/docs/toggle-group/single.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "ghost",
+            values: ["ghost", "outline", "solid"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### Controlled
+
+<DemoCodePreview
+    path="demo/docs/toggle-group/controlled.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "ghost",
+            values: ["ghost", "outline", "solid"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Props
+
+| Prop    | Type                                              | Default |
+|---------|---------------------------------------------------|---------|
+| size    | `sm` `md` `lg `                                   | md      |
+| variant | `solid` `outline` `ghost`                         | solid   |
+| color   | `default` `primary` `secondary` `success` `error` | default |
