@@ -1,0 +1,183 @@
+---
+slug: components-textarea
+title: Text Area
+description: Allows users to input multi-line text within a resizable field
+---
+
+<DemoCodePreview
+    path="demo/docs/textarea/default.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft", "underline"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Installation
+
+<Tabs defaultValue="cli" className="mt-3">
+    <TabsList>
+        <TabsTrigger value="cli">CLI</TabsTrigger>
+        <TabsTrigger value="manual">Manual</TabsTrigger>
+    </TabsList>
+    <TabsContent value="cli" className="mt-4">
+        <InstallationCommand command='npx shadcn@latest add "~website/r/components/textarea"' />
+    </TabsContent>
+    <TabsContent value="manual" className="mt-4">
+        <Steps>
+            <Step>
+                Copy and paste the following code into your project
+            </Step>
+            <CodePreview path='components/ui/textarea.tsx' collapsible></CodePreview>
+            <Step>
+                Update the import paths to fit your project setup
+            </Step>
+        </Steps>
+
+    </TabsContent>
+
+</Tabs>
+
+## Examples
+
+### Disabled
+
+<DemoCodePreview
+    path="demo/docs/textarea/disabled.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft", "underline"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### With Label
+
+<DemoCodePreview
+    path="demo/docs/textarea/with-label.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft", "underline"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### With Helper
+
+<DemoCodePreview
+    path="demo/docs/textarea/with-helper.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft", "underline"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+### Controlled
+
+<DemoCodePreview
+    path="demo/docs/textarea/controlled.tsx"
+    props={[
+        {
+            title: "Variant",
+            name: "variant",
+            type: "select",
+            defaultValue: "outline",
+            values: ["outline", "soft", "underline"],
+        },
+        {
+            title: "Color",
+            name: "color",
+            type: "select",
+            defaultValue: "default",
+            values: ["default", "primary", "secondary", "success", "error"],
+        },
+        {
+            title: "Size",
+            name: "size",
+            type: "select",
+            defaultValue: "md",
+            values: ["sm", "md", "lg"],
+        },
+    ]}
+/>
+
+## Props
+
+| Prop    | Type                                              | Default |
+|---------|---------------------------------------------------|---------|
+| variant | `outline` `soft` `underline`                      | outline |
+| size    | `sm` `md` `lg`                                    | md      |
+| color   | `default` `primary` `secondary` `success` `error` | default |

@@ -168,6 +168,11 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
                 link: components + "/tabs",
             },
             {
+                title: "Textarea",
+                link: components + "/textarea",
+                new: true,
+            },
+            {
                 title: "Toggle",
                 link: components + "/toggle",
                 new: true,
@@ -185,16 +190,10 @@ export const docsSidebarNavItems: SidebarNavItem[] = [
         comingSoon: true,
         items: [
             {
-                title: "Radio Group",
-            },
-            {
                 title: "Scroll Area",
             },
             {
                 title: "Table",
-            },
-            {
-                title: "Textarea",
             },
         ],
     },

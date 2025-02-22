@@ -183,6 +183,17 @@ export const componentRegistries: RegistryItem[] = [
         ],
     },
     {
+        name: "radio-group",
+        type: "registry:ui",
+        dependencies: ["@radix-ui/react-radio-group"],
+        files: [
+            {
+                path: "ui/radio-group.tsx",
+                type: "registry:ui",
+            },
+        ],
+    },
+    {
         name: "scroll-area",
         type: "registry:ui",
         dependencies: ["@radix-ui/react-scroll-area"],
@@ -243,6 +254,16 @@ export const componentRegistries: RegistryItem[] = [
         files: [
             {
                 path: "ui/tabs.tsx",
+                type: "registry:ui",
+            },
+        ],
+    },
+    {
+        name: "textarea",
+        type: "registry:ui",
+        files: [
+            {
+                path: "ui/textarea.tsx",
                 type: "registry:ui",
             },
         ],
