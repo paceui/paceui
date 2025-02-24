@@ -29,8 +29,7 @@ export default function LandingPage() {
                             </div>
                         </div>
                         <h1 className="text-default-800 mt-4 sm:text-xl">
-                            Easily integrate, customizable, copy-pasteable Tailwind components and variants into your
-                            React and Next.js apps
+                            A Tailwind CSS components and variants, ready to copy-paste into your React & Next.js apps.
                         </h1>
                         <div className="mt-8 flex justify-center gap-6 max-sm:flex-col">
                             <Button size="lg" variant="ghost" asChild>

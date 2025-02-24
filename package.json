@@ -1,5 +1,6 @@
 {
     "name": "paceui",
+    "description": "A Tailwind CSS components and variants library, built for React & Next.js. Copy, paste, and ship faster with clean, customizable UI elements",
     "version": "0.0.1",
     "private": true,
     "license": "MIT",

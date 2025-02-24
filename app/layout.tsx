@@ -15,9 +15,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-    title: { template: "%s | PaceUI", default: "PaceUI – Modern UI Components for Fast & Beautiful Web Apps" },
+    title: { template: "%s | PaceUI", default: "PaceUI – Tailwind CSS Components & Variants, Ready to Copy-Paste into Your React & Next.js Apps" },
     description:
-        "Effortlessly integrate customizable, copy-pasteable Tailwind components and variants into your React and Next.js apps. Build faster with beautifully designed, reusable UI elements tailored for modern web development.",
+        "A Tailwind CSS components and variants library, built for React & Next.js. Copy, paste, and ship faster with clean, customizable UI elements",
     keywords: ["tailwind", "next.js", "react", "ui components", "web design", "copy-paste components", "radix ui"],
     icons: {
         icon: [
@@ -42,15 +42,15 @@ export const metadata: Metadata = {
         ]
     },
     openGraph: {
-        title: "PaceUI | Tailwind Components for React Ecosystem",
-        description: "Integrate customizable Tailwind components into your React and Next.js apps seamlessly.",
+        title: "PaceUI - Tailwind CSS Components & Variants for React & Next.js",
+        description: "A Tailwind CSS components and variants library, built for React & Next.js. Copy, paste, and ship faster with clean, customizable UI elements",
         url: "https://paceui.com",
         siteName: "PaceUI",
     },
     twitter: {
         card: "summary_large_image",
-        title: "PaceUI | Tailwind Components for React Ecosystem",
-        description: "Integrate customizable Tailwind components into your React and Next.js apps seamlessly.",
+        title: "PaceUI - Tailwind CSS Components & Variants for React & Next.js",
+        description: "A Tailwind CSS components and variants library, built for React & Next.js. Copy, paste, and ship faster with clean, customizable UI elements",
     },
     alternates:{
       canonical: "https://paceui.com",
